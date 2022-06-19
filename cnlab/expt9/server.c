@@ -42,7 +42,7 @@ void main(int argc, char* argv[]) {
     			printf("Receive failed!\n");
 			exit(1);
 		} else {
-			printf("Received time request %d...\n", code);
+			printf("Received time request.\n");
 			
 			time_t now = time(0);
 			char* str = ctime(&now);
@@ -51,7 +51,7 @@ void main(int argc, char* argv[]) {
 				printf("Sending failed!\n");
 				exit(1);
 			} else {
-				printf("Time request accepted and sent!\n");
+				printf("Time reply sent.\n");
 			}
     		}
     	}
