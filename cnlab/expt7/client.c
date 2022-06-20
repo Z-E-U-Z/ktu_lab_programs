@@ -9,6 +9,8 @@
 void* clientSend(void* fd) {
 	char str[100];
 	int client_fd = *((int*) fd);
+	int wordCount = 0;
+	int totalCount = 25;
 	
 	printf("Chat active...\n");
 	
@@ -17,14 +19,35 @@ void* clientSend(void* fd) {
 		str[strlen(str) - 1] = '\0';
 		
 		if(!strcmp(str, "stop")) {
-			printf("Exit.\n");
+			printf("Exiting.\n");
 			exit(1);
 		}
 		
 		if(strlen(str) != 0) {
-			if(send(client_fd, str, (strlen(str) + 1) * sizeof(char), 0) < 0) {
-				printf("Send failed!\n");
-				exit(1);
+			int count = 0;
+			char* tempStr = strdup(str);
+			char* token = strtok(tempStr, " ");
+			
+			while(token != NULL) {
+				count++;
+				token = strtok(NULL, " ");
+			}
+			
+			wordCount += count;
+			
+			if(wordCount <= totalCount) {
+				if(send(client_fd, str, (strlen(str) + 1) * sizeof(char), 0) < 0) {
+					printf("Send failed!\n");
+					exit(1);
+				}
+				
+				if(wordCount == totalCount) {
+					printf("Chat limit reached. Exiting.\n");
+					exit(1);
+				}
+			} else {
+				printf("Chat limit exceeded by %d words.\n", wordCount - totalCount);
+				wordCount -= count;
 			}
 		}
 	}
@@ -62,13 +85,13 @@ void main() {
 		printf("Client socket created.\n");
 	}
 	
-	int PORT;
-	printf("Enter chat server port: ");
-	scanf("%d", &PORT);
+	int port;
+	printf("Command: ");
+	scanf("start %d", &port);
 	
 	serv_addr.sin_family = AF_INET;
 	serv_addr.sin_addr.s_addr = INADDR_ANY;
-	serv_addr.sin_port = htons(PORT);
+	serv_addr.sin_port = htons(port);
 	
 	if(connect(client_fd, (struct sockaddr*) &serv_addr, sizeof(serv_addr)) < 0) {
 		printf("Connection failed!\n");
