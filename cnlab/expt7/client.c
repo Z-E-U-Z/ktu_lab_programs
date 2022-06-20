@@ -6,31 +6,36 @@
 #include <string.h>
 #include <pthread.h>
 
-#define PORT 5000
-
 void* clientSend(void* fd) {
-	char str[20];
+	char str[100];
 	int client_fd = *((int*) fd);
 	
 	printf("Chat active...\n");
 	
 	while(1) {
-		fgets(str, 20, stdin);
+		fgets(str, 100, stdin);
 		str[strlen(str) - 1] = '\0';
 		
-		if(send(client_fd, str, 20 * sizeof(char), 0) < 0) {
-			printf("Send failed!\n");
+		if(!strcmp(str, "stop")) {
+			printf("Exit.\n");
 			exit(1);
+		}
+		
+		if(strlen(str) != 0) {
+			if(send(client_fd, str, (strlen(str) + 1) * sizeof(char), 0) < 0) {
+				printf("Send failed!\n");
+				exit(1);
+			}
 		}
 	}
 }
 
 void* clientRecv(void* fd) {
-	char str[20];
+	char str[120];
 	int client_fd = *((int*) fd);
 	
 	while(1) {
-		int k = recv(client_fd, str, 20 * sizeof(char), 0);
+		int k = recv(client_fd, str, 120 * sizeof(char), 0);
 		
 		if(k < 0) {
 			printf("Receive failed!\n");
@@ -48,7 +53,7 @@ void main() {
 	int client_fd;
 	struct sockaddr_in serv_addr;
 	
-	printf("TCP Client\n");
+	printf("Chat Client\n");
 	
 	if((client_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
 		printf("Socket creation failed!\n");
@@ -56,6 +61,10 @@ void main() {
 	} else {
 		printf("Client socket created.\n");
 	}
+	
+	int PORT;
+	printf("Enter chat server port: ");
+	scanf("%d", &PORT);
 	
 	serv_addr.sin_family = AF_INET;
 	serv_addr.sin_addr.s_addr = INADDR_ANY;
