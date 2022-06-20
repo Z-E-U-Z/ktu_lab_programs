@@ -7,12 +7,11 @@
 #include <math.h>
 
 #define PORT 8000
-#define C1PORT 8001
-#define C2PORT 8002
+#define PORT1 8001
 
 void main() {
 	int server_fd, client_fd1, client_fd2;
-	struct sockaddr_in address, cli_addr1, cli_addr2;
+	struct sockaddr_in address, cli_addr;
 	int opt, addrlen = sizeof(address);
 	float num;
 	
@@ -93,13 +92,12 @@ void main() {
 			printf("%.2f^1.5 = %.4f sent to client 2.\n", num, res);
 		}
 	} else {
-		int len1 = sizeof(cli_addr1);
-		int len2 = sizeof(cli_addr1);
+		int len = sizeof(address);
+		int len1 = sizeof(cli_addr);
 		
-		cli_addr1.sin_port = htons(C1PORT);
-		cli_addr2.sin_port = htons(C2PORT);
+		cli_addr.sin_port = htons(PORT1);
 		
-		if(recvfrom(server_fd, &num, sizeof(float), 0, (struct sockaddr*) &cli_addr1, &len1) < 0) {
+		if(recvfrom(server_fd, &num, sizeof(float), 0, (struct sockaddr*) &address, &len) < 0) {
 			printf("Receive failed!\n");
 			exit(1);
 		} else {
@@ -108,7 +106,7 @@ void main() {
 		
 		float res = pow(num, 1.5);
 		
-		if(sendto(server_fd, &res, sizeof(float), 0, (struct sockaddr*) &cli_addr2, len2) < 0) {
+		if(sendto(server_fd, &res, sizeof(float), 0, (struct sockaddr*) &cli_addr, len1) < 0) {
 			printf("Send failed!\n");
 			exit(1);
 		} else {

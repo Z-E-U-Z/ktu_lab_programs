@@ -4,11 +4,19 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 
+char* get() {
+	return "Hello, Welcome!";
+}
+
+char* post(char* body) {
+	return "Body posted!";
+}
+
 void main(int PORT) {
 	int server_fd, client_fd;
 	struct sockaddr_in address;
 	int addrlen = sizeof(address);
-	char buff[6];
+	char buff[20];
 	
 	if((server_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
 		printf("Socket creation failed!\n");
@@ -39,11 +47,28 @@ void main(int PORT) {
 			printf("Request accepted.\n");
 		}
 		
-		if(recv(client_fd, buff, 6 * sizeof(char), 0) < 0) {
+		if(recv(client_fd, buff, 20 * sizeof(char), 0) < 0) {
 			printf("Receive failed!\n");
 			exit(1);
 		} else {
 			printf("Request: %s\n", buff);
+			
+			if(!strcmp(buff, "get") {
+				buff = get();
+				
+				if(send(client_fd, buff, 20 * sizeof(char), 0) < 0)
+					printf("Receive failed!\n");
+			} else if(!strcmp(buff, "post") {
+				if(recv(client_fd, buff, 20 * sizeof(char), 0) < 0)
+					printf("Receive failed!\n");
+					
+				buff = post(buff);
+			} else {
+				buff = "Invalid request";
+				
+				if(send(client_fd, buff, 20 * sizeof(char), 0) < 0)
+					printf("Receive failed!\n");
+			}
 		}
 	}
 	

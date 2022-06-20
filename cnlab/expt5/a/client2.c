@@ -6,7 +6,7 @@
 #include <string.h>
 
 #define PORT 8000
-#define PORT2 8002
+#define PORT1 8001
 
 void main() {
 	int client_fd;
@@ -49,7 +49,7 @@ void main() {
 	
 	cli_addr.sin_family = AF_INET;
 	cli_addr.sin_addr.s_addr = INADDR_ANY;
-	cli_addr.sin_port = htons(PORT2);
+	cli_addr.sin_port = htons(PORT1);
 	
 	if(opt == 1) {
 		if(connect(client_fd, (struct sockaddr*) &serv_addr, len) < 0) {
@@ -77,7 +77,7 @@ void main() {
 			printf("Socket binded.\n");
 		}
 		
-		if(recvfrom(client_fd, str, 20 * sizeof(char), 0, (struct sockaddr*) &serv_addr, &len) < 0) {
+		if(recvfrom(client_fd, str, 20 * sizeof(char), 0, (struct sockaddr*) &cli_addr, &len) < 0) {
 			printf("Receive failed!\n");
 			exit(1);
 		} else {
