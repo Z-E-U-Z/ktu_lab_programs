@@ -1,0 +1,98 @@
+EXPERIMENT 2
+Amal Nath M
+R5 11
+
+SQL> select dept_name, count(*), avg(salary) from instructor group by dept_name;
+
+
+DEPT_NAME              COUNT(*) AVG(SALARY)
+-------------------- ---------- -----------
+Elec. Eng.                    1       88000
+Physics                       2      100100
+Comp. Sci.                    3  86258.3333
+Finance                       1       99000
+Biology                       1       83160
+Music                         1       46200
+History                       2       70455
+
+7 rows selected.
+
+SQL> select course_id, semester, count(*) from subject group by course_id, semes
+ter;
+
+COURSE_ID  SEMESTER     COUNT(*)
+---------- ---------- ----------
+FIN-201    Spring              1
+CS-101     Spring              1
+EE-181     Spring              1
+CS-190     Spring              2
+CS-315     Spring              2
+HIS-351    Spring              1
+CS-347     Fall                2
+CS-319     Spring              2
+BIO-301    Summer              1
+PHY-101    Fall                1
+CS-101     Fall                6
+
+COURSE_ID  SEMESTER     COUNT(*)
+---------- ---------- ----------
+BIO-101    Summer              1
+MU-199     Spring              1
+
+13 rows selected.
+
+SQL> select course_id, semester, count(*) from subject group by course_id, semes
+ter having count(*) > 2;
+
+COURSE_ID  SEMESTER     COUNT(*)
+---------- ---------- ----------
+CS-101     Fall                6
+
+SQL> select t.course_id, i.name from teaches t join instructor i on t.ID = i.ID;
+
+
+COURSE_ID  NAME
+---------- --------------------
+CS-101     Srinivasan
+CS-315     Srinivasan
+CS-347     Srinivasan
+FIN-201    Wu
+MU-199     Mozart
+PHY-101    Einstein
+HIS-351    El Said
+CS-101     Katz
+CS-319     Katz
+BIO-101    Crick
+BIO-301    Crick
+
+COURSE_ID  NAME
+---------- --------------------
+CS-190     Brandt
+CS-190     Brandt
+CS-319     Brandt
+EE-181     Kim
+
+15 rows selected.
+
+SQL> select dept_name, count(*) as num_of_courses from course group by dept_name
+;
+
+DEPT_NAME            NUM_OF_COURSES
+-------------------- --------------
+Elec. Eng.                        1
+Physics                           1
+Comp. Sci.                        5
+Finance                           1
+Biology                           2
+History                           1
+Music                             1
+
+7 rows selected.
+
+SQL> select dept_name, count(*) from instructor where salary > 80000 group by de
+pt_name having count(*) >= 2;
+
+DEPT_NAME              COUNT(*)
+-------------------- ----------
+Physics                       2
+Comp. Sci.                    2

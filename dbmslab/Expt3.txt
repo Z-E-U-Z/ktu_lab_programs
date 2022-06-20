@@ -1,0 +1,913 @@
+EXPERIMENT 3
+Amal Nath M
+R5 11
+
+SQL> insert into classroom values('Packard', 101, 500);
+
+1 row created.
+
+SQL> insert into classroom values('Painter', 514, 10);
+
+1 row created.
+
+SQL> insert into classroom values('Taylor', 3128, 70);
+
+1 row created.
+
+SQL> insert into classroom values('Watson', 100, 30);
+
+1 row created.
+
+SQL> insert into classroom values('Watson', 120, 50);
+
+1 row created.
+
+SQL> select * from classroom;
+
+BUILDING                                           ROOM_NUMBER   CAPACITY
+-------------------------------------------------- ----------- ----------
+Packard                                                    101        500
+Painter                                                    514         10
+Taylor                                                    3128         70
+Watson                                                     100         30
+Watson                                                     120         50
+
+SQL> insert into department values('Biology', 'Watson', 90000);
+
+1 row created.
+
+SQL> insert into department values('Comp. Sci.', 'Taylor', 100000);
+
+1 row created.
+
+SQL> insert into department values('Elec. Eng.', 'Taylor', 85000);
+
+1 row created.
+
+SQL> insert into department values('Finance', 'Painter', 120000);
+
+1 row created.
+
+SQL> insert into department values('History', 'Painter', 50000);
+
+1 row created.
+
+SQL> insert into department values('Music', 'Packard', 80000);
+
+1 row created.
+
+SQL> insert into department values('Physics', 'Watson', 70000);
+
+1 row created.
+
+SQL> select * from department;
+
+DEPT_NAME            BUILDING
+-------------------- --------------------------------------------------
+    BUDGET
+----------
+Biology              Watson
+     90000
+
+Comp. Sci.           Taylor
+    100000
+
+Elec. Eng.           Taylor
+     85000
+
+
+DEPT_NAME            BUILDING
+-------------------- --------------------------------------------------
+    BUDGET
+----------
+Finance              Painter
+    120000
+
+History              Painter
+     50000
+
+Music                Packard
+     80000
+
+
+DEPT_NAME            BUILDING
+-------------------- --------------------------------------------------
+    BUDGET
+----------
+Physics              Watson
+     70000
+
+
+7 rows selected.
+
+SQL> insert into instructor values(10101, 'Srinivasan', 'Comp. Sci.', 65000);
+
+1 row created.
+
+SQL> insert into instructor values(12121, 'Wu', 'Finance', 90000);
+
+1 row created.
+
+SQL> insert into instructor values(15151, 'Mozart', 'Music', 40000);
+
+1 row created.
+
+SQL> insert into instructor values(22222, 'Einstein', 'Physics', 95000);
+
+1 row created.
+
+SQL> insert into instructor values(32343, 'El Said', 'History', 60000);
+
+1 row created.
+
+SQL> insert into instructor values(33456, 'Gold', 'Physics', 87000);
+
+1 row created.
+
+SQL> insert into instructor values(45565, 'Katz', 'Comp. Sci.', 75000);
+
+1 row created.
+
+SQL> insert into instructor values(58583, 'Califieri', 'History', 62000);
+
+1 row created.
+
+SQL> insert into instructor values(76543, 'Singh', 'Finance', 80000);
+
+1 row created.
+
+SQL> insert into instructor values(76766, 'Crick', 'Biology', 72000);
+
+1 row created.
+
+SQL> insert into instructor values(83821, 'Brandt', 'Comp. Sci.', 92000);
+
+1 row created.
+
+SQL> insert into instructor values(98345, 'Kim', 'Elec. Eng.', 80000);
+
+1 row created.
+
+SQL> select * from instructor;
+
+        ID NAME                 DEPT_NAME                SALARY
+---------- -------------------- -------------------- ----------
+     10101 Srinivasan           Comp. Sci.                65000
+     12121 Wu                   Finance                   90000
+     15151 Mozart               Music                     40000
+     22222 Einstein             Physics                   95000
+     32343 El Said              History                   60000
+     33456 Gold                 Physics                   87000
+     45565 Katz                 Comp. Sci.                75000
+     58583 Califieri            History                   62000
+     76543 Singh                Finance                   80000
+     76766 Crick                Biology                   72000
+     83821 Brandt               Comp. Sci.                92000
+
+        ID NAME                 DEPT_NAME                SALARY
+---------- -------------------- -------------------- ----------
+     98345 Kim                  Elec. Eng.                80000
+
+12 rows selected.
+
+SQL> insert into course values('BIO-101', 'Intro. to Biology', 'Biology', 4);
+
+1 row created.
+
+SQL> insert into course values('BIO-301', 'Genetics', 'Biology', 4);
+
+1 row created.
+
+SQL> insert into course values('BIO-399', 'Computation Biology', 'Biology', 3);
+
+1 row created.
+
+SQL> insert into course values('CS-101', 'Intro. to Comp. Sci.', 'Comp. Sci.', 4
+);
+
+1 row created.
+
+SQL> insert into course values('CS-190', 'Game Design', 'Comp. Sci.', 4);
+
+1 row created.
+
+SQL> insert into course values('CS-315', 'Robotics', 'Comp. Sci.', 3);
+
+1 row created.
+
+SQL> insert into course values('CS-319', 'Image Processing', 'Comp. Sci.', 3);
+
+1 row created.
+
+SQL> insert into course values('CS-347', 'DB System Concepts', 'Comp. Sci.', 3);
+
+1 row created.
+
+SQL> insert into course values('EE-181', 'Intro. Dig Systems', 'Elec. Eng.', 3);
+
+1 row created.
+
+SQL> insert into course values('FIN-201', 'Investment Banking', 'Finance', 3);
+
+1 row created.
+
+SQL> insert into course values('HIS-351', 'World History', 'History', 3);
+
+1 row created.
+
+SQL> insert into course values('MU-199', 'Music Video Prod.', 'Music', 3);
+
+1 row created.
+
+SQL> insert into course values('PHY-101', 'Physical Principles', 'Physics', 4);
+
+1 row created.
+
+SQL> select * from course;
+
+COURSE_ID  TITLE                DEPT_NAME               CREDITS
+---------- -------------------- -------------------- ----------
+BIO-101    Intro. to Biology    Biology                       4
+BIO-301    Genetics             Biology                       4
+BIO-399    Computation Biology  Biology                       3
+CS-101     Intro. to Comp. Sci. Comp. Sci.                    4
+CS-190     Game Design          Comp. Sci.                    4
+CS-315     Robotics             Comp. Sci.                    3
+CS-319     Image Processing     Comp. Sci.                    3
+CS-347     DB System Concepts   Comp. Sci.                    3
+EE-181     Intro. Dig Systems   Elec. Eng.                    3
+FIN-201    Investment Banking   Finance                       3
+HIS-351    World History        History                       3
+
+COURSE_ID  TITLE                DEPT_NAME               CREDITS
+---------- -------------------- -------------------- ----------
+MU-199     Music Video Prod.    Music                         3
+PHY-101    Physical Principles  Physics                       4
+
+13 rows selected.
+
+SQL> insert into student values(00128, 'Zhang', 'Comp. Sci.', 102, TO_DATE('24-07-2000', 'dd-mm-yyyy');
+
+1 row created.
+
+SQL> insert into student values(12345, 'Shankar', 'Comp. Sci.', 32, DATE '2001-0
+1-01');
+
+1 row created.
+
+SQL> insert into student values(19991, 'Brandt', 'History', 80, DATE '2002-06-10
+');
+
+1 row created.
+
+SQL> insert into student values(23121, 'Chavez', 'Finance', 110, DATE '2003-05-2
+5');
+
+1 row created.
+
+SQL> insert into student values(44553, 'Peltier', 'Physics', 56, DATE '2004-04-3
+0');
+
+1 row created.
+
+SQL> insert into student values(45678, 'Levy', 'Physics', 46, DATE '1999-08-27')
+;
+
+1 row created.
+
+SQL> insert into student values(54321, 'Williams', 'Comp. Sci.', 54, DATE '2006-
+10-01');
+
+1 row created.
+
+SQL> insert into student values(55739, 'Sanchez', 'Music', 38, DATE '1995-02-07'
+);
+
+1 row created.
+
+SQL> insert into student values(70557, 'Snow', 'Physics', 0, DATE '2008-04-08');
+
+
+1 row created.
+
+SQL> insert into student values(76543, 'Brown', 'Comp. Sci.', 58, DATE '2009-03-
+09');
+
+1 row created.
+
+SQL> insert into student values(76653, 'Aoi', 'Elec. Eng.', 60, DATE '2010-05-10
+');
+
+1 row created.
+
+SQL> insert into student values(98765, 'Bourikas', 'Elec. Eng.', 98, DATE '2011-
+06-07');
+
+1 row created.
+
+SQL> insert into student values(98988, 'Tanaka', 'Biology', 120, DATE '2012-04-0
+8');
+
+1 row created.
+
+SQL> select * from student;
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+       128 Zhang                Comp. Sci.                  102 24-JUL-00
+     12345 Shankar              Comp. Sci.                   32 01-JAN-01
+     19991 Brandt               History                      80 10-JUN-02
+     23121 Chavez               Finance                     110 25-MAY-03
+     44553 Peltier              Physics                      56 30-APR-04
+     45678 Levy                 Physics                      46 27-AUG-99
+     54321 Williams             Comp. Sci.                   54 01-OCT-06
+     55739 Sanchez              Music                        38 07-FEB-95
+     70557 Snow                 Physics                       0 08-APR-08
+     76543 Brown                Comp. Sci.                   58 09-MAR-09
+     76653 Aoi                  Elec. Eng.                   60 10-MAY-10
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+     98765 Bourikas             Elec. Eng.                   98 07-JUN-11
+     98988 Tanaka               Biology                     120 08-APR-12
+
+13 rows selected.
+
+SQL> insert into section values('BIO-101', 1, 'Summer', 2009, 'Painter', 514);
+
+1 row created.
+
+SQL> insert into section values('BIO-301', 1, 'Summer', 2010, 'Painter', 514);
+
+1 row created.
+
+SQL> insert into section values('CS-101', 1, 'Fall', 2009, 'Packard', 101);
+
+1 row created.
+
+SQL> insert into section values('CS-101', 1, 'Spring', 2010, 'Packard', 101);
+
+1 row created.
+
+SQL> insert into section values('CS-190', 1, 'Spring', 2009, 'Taylor', 3128);
+
+1 row created.
+
+SQL> insert into section values('CS-190', 2, 'Spring', 2009, 'Taylor', 3128);
+
+1 row created.
+
+SQL> insert into section values('CS-315', 1, 'Spring', 2010, 'Watson', 120);
+
+1 row created.
+
+SQL> insert into section values('CS-319', 1, 'Spring', 2010, 'Watson', 100);
+
+1 row created.
+
+SQL> insert into section values('CS-319', 2, 'Spring', 2010, 'Taylor', 3128);
+
+1 row created.
+
+SQL> insert into section values('CS-347', 1, 'Fall', 2009, 'Taylor', 3128);
+
+1 row created.
+
+SQL> insert into section values('EE-181', 1, 'Spring', 2009, 'Taylor', 3128);
+
+1 row created.
+
+SQL> insert into section values('FIN-201', 1, 'Spring', 2010, 'Packard', 101);
+
+1 row created.
+
+SQL> insert into section values('HIS-351', 1, 'Spring', 2010, 'Painter', 514);
+
+1 row created.
+
+SQL> insert into section values('MU-199', 1, 'Spring', 2010, 'Packard', 101);
+
+1 row created.
+
+SQL> insert into section values('PHY-101', 1, 'Fall', 2009, 'Watson', 100);
+
+1 row created.
+
+SQL> select * from section;
+
+COURSE_ID      SEC_ID SEMESTER         YEAR
+---------- ---------- ---------- ----------
+BUILDING                                           ROOM_NUMBER
+-------------------------------------------------- -----------
+BIO-101             1 Summer           2009
+Painter                                                    514
+
+BIO-301             1 Summer           2010
+Painter                                                    514
+
+CS-101              1 Fall             2009
+Packard                                                    101
+
+
+COURSE_ID      SEC_ID SEMESTER         YEAR
+---------- ---------- ---------- ----------
+BUILDING                                           ROOM_NUMBER
+-------------------------------------------------- -----------
+CS-101              1 Spring           2010
+Packard                                                    101
+
+CS-190              1 Spring           2009
+Taylor                                                    3128
+
+CS-190              2 Spring           2009
+Taylor                                                    3128
+
+
+COURSE_ID      SEC_ID SEMESTER         YEAR
+---------- ---------- ---------- ----------
+BUILDING                                           ROOM_NUMBER
+-------------------------------------------------- -----------
+CS-315              1 Spring           2010
+Watson                                                     120
+
+CS-319              1 Spring           2010
+Watson                                                     100
+
+CS-319              2 Spring           2010
+Taylor                                                    3128
+
+
+COURSE_ID      SEC_ID SEMESTER         YEAR
+---------- ---------- ---------- ----------
+BUILDING                                           ROOM_NUMBER
+-------------------------------------------------- -----------
+CS-347              1 Fall             2009
+Taylor                                                    3128
+
+EE-181              1 Spring           2009
+Taylor                                                    3128
+
+FIN-201             1 Spring           2010
+Packard                                                    101
+
+
+COURSE_ID      SEC_ID SEMESTER         YEAR
+---------- ---------- ---------- ----------
+BUILDING                                           ROOM_NUMBER
+-------------------------------------------------- -----------
+HIS-351             1 Spring           2010
+Painter                                                    514
+
+MU-199              1 Spring           2010
+Packard                                                    101
+
+PHY-101             1 Fall             2009
+Watson                                                     100
+
+
+15 rows selected.
+
+SQL> insert into teaches values(10101, 'CS-101', 1, 'Fall', 2009);
+
+1 row created.
+
+SQL> insert into teaches values(10101, 'CS-315', 1, 'Spring', 2010);
+
+1 row created.
+
+SQL> insert into teaches values(10101, 'CS-347', 1, 'Fall', 2009);
+
+1 row created.
+
+SQL> insert into teaches values(12121, 'FIN-201', 1, 'Spring', 2010);
+
+1 row created.
+
+SQL> insert into teaches values(15151, 'MU-199', 1, 'Spring', 2010);
+
+1 row created.
+
+SQL> insert into teaches values(22222, 'PHY-101', 1, 'Fall', 2009);
+
+1 row created.
+
+SQL> insert into teaches values(32343, 'HIS-351', 1, 'Spring', 2010);
+
+1 row created.
+
+SQL> insert into teaches values(45565, 'CS-101', 1, 'Spring', 2010);
+
+1 row created.
+
+SQL> insert into teaches values(45565, 'CS-319', 1, 'Spring', 2010);
+
+1 row created.
+
+SQL> insert into teaches values(76766, 'BIO-101', 1, 'Summer', 2009);
+
+1 row created.
+
+SQL> insert into teaches values(76766, 'BIO-301', 1, 'Summer', 2010);
+
+1 row created.
+
+SQL> insert into teaches values(83821, 'CS-190', 1, 'Spring', 2009);
+
+1 row created.
+
+SQL> insert into teaches values(83821, 'CS-190', 2, 'Spring', 2009);
+
+1 row created.
+
+SQL> insert into teaches values(83821, 'CS-319', 2, 'Spring', 2010);
+
+1 row created.
+
+SQL> insert into teaches values(98345, 'EE-181', 1, 'Spring', 2009);
+
+1 row created.
+
+SQL> select * from teaches;
+
+        ID COURSE_ID      SEC_ID SEMESTER         YEAR
+---------- ---------- ---------- ---------- ----------
+     10101 CS-101              1 Fall             2009
+     10101 CS-315              1 Spring           2010
+     10101 CS-347              1 Fall             2009
+     12121 FIN-201             1 Spring           2010
+     15151 MU-199              1 Spring           2010
+     22222 PHY-101             1 Fall             2009
+     32343 HIS-351             1 Spring           2010
+     45565 CS-101              1 Spring           2010
+     45565 CS-319              1 Spring           2010
+     76766 BIO-101             1 Summer           2009
+     76766 BIO-301             1 Summer           2010
+
+        ID COURSE_ID      SEC_ID SEMESTER         YEAR
+---------- ---------- ---------- ---------- ----------
+     83821 CS-190              1 Spring           2009
+     83821 CS-190              2 Spring           2009
+     83821 CS-319              2 Spring           2010
+     98345 EE-181              1 Spring           2009
+
+15 rows selected.
+
+SQL> insert into subject values(00128, 'CS-101', 1, 'Fall', 2009, 'A');
+
+1 row created.
+
+SQL> insert into subject values(00128, 'CS-347', 1, 'Fall', 2009, 'A-');
+
+1 row created.
+
+SQL> insert into subject values(12345, 'CS-101', 1, 'Fall', 2009, 'C');
+
+1 row created.
+
+SQL> insert into subject values(12345, 'CS-190', 2, 'Spring', 2009, 'A');
+
+1 row created.
+
+SQL> insert into subject values(12345, 'CS-315', 1, 'Spring', 2010, 'A');
+
+1 row created.
+
+SQL> insert into subject values(12345, 'CS-347', 1, 'Fall', 2009, 'A');
+
+1 row created.
+
+SQL> insert into subject values(19991, 'HIS-351', 1, 'Spring', 2010, 'B');
+
+1 row created.
+
+SQL> insert into subject values(23121, 'FIN-201', 1, 'Spring', 2010, 'C+');
+
+1 row created.
+
+SQL> insert into subject values(44553, 'PHY-101', 1, 'Fall', 2009, 'B-');
+
+1 row created.
+
+SQL> insert into subject values(45678, 'CS-101', 1, 'Fall', 2009, 'F');
+
+1 row created.
+
+SQL> insert into subject values(45678, 'CS-101', 1, 'Spring', 2010, 'B+');
+
+1 row created.
+
+SQL> insert into subject values(45678, 'CS-319', 1, 'Spring', 2010, 'B');
+
+1 row created.
+
+SQL> insert into subject values(54321, 'CS-101', 1, 'Fall', 2009, 'A-');
+
+1 row created.
+
+SQL> insert into subject values(54321, 'CS-190', 2, 'Spring', 2009, 'B+');
+
+1 row created.
+
+SQL> insert into subject values(55739, 'MU-199', 1, 'Spring', 2010, 'A-');
+
+1 row created.
+
+SQL> insert into subject values(76543, 'CS-101', 1, 'Fall', 2009, 'A');
+
+1 row created.
+
+SQL> insert into subject values(76543, 'CS-319', 2, 'Spring', 2010, 'A');
+
+1 row created.
+
+SQL> insert into subject values(76653, 'EE-181', 1, 'Spring', 2009, 'C');
+
+1 row created.
+
+SQL> insert into subject values(98765, 'CS-101', 1, 'Fall', 2009, 'C-');
+
+1 row created.
+
+SQL> insert into subject values(98765, 'CS-315', 1, 'Spring', 2010, 'B');
+
+1 row created.
+
+SQL> insert into subject values(98988, 'BIO-101', 1, 'Summer', 2009, 'A');
+
+1 row created.
+
+SQL> insert into subject values(98988, 'BIO-301', 1, 'Summer', 2010, null);
+
+1 row created.
+
+SQL> select * from subject;
+
+        ID COURSE_ID      SEC_ID SEMESTER         YEAR GRADE
+---------- ---------- ---------- ---------- ---------- -----
+       128 CS-101              1 Fall             2009 A
+       128 CS-347              1 Fall             2009 A-
+     12345 CS-101              1 Fall             2009 C
+     12345 CS-190              2 Spring           2009 A
+     12345 CS-315              1 Spring           2010 A
+     12345 CS-347              1 Fall             2009 A
+     19991 HIS-351             1 Spring           2010 B
+     23121 FIN-201             1 Spring           2010 C+
+     44553 PHY-101             1 Fall             2009 B-
+     45678 CS-101              1 Fall             2009 F
+     45678 CS-101              1 Spring           2010 B+
+
+        ID COURSE_ID      SEC_ID SEMESTER         YEAR GRADE
+---------- ---------- ---------- ---------- ---------- -----
+     45678 CS-319              1 Spring           2010 B
+     54321 CS-101              1 Fall             2009 A-
+     54321 CS-190              2 Spring           2009 B+
+     55739 MU-199              1 Spring           2010 A-
+     76543 CS-101              1 Fall             2009 A
+     76543 CS-319              2 Spring           2010 A
+     76653 EE-181              1 Spring           2009 C
+     98765 CS-101              1 Fall             2009 C-
+     98765 CS-315              1 Spring           2010 B
+     98988 BIO-101             1 Summer           2009 A
+     98988 BIO-301             1 Summer           2010
+
+22 rows selected.
+
+SQL> update student set name = 'Mozart' where ID=45678;
+
+1 row updated.
+
+SQL> select name from student where ID=45678;
+
+NAME
+--------------------
+Mozart
+
+SQL> update department set budget = 100000, building = 'Taylor' where dept_name
+= 'History';
+
+1 row updated.
+
+SQL> select budget, building from department where dept_name = 'History';
+
+    BUDGET BUILDING
+---------- --------------------------------------------------
+    100000 Taylor
+
+SQL> update instructor set salary = salary * 1.1;
+
+12 rows updated.
+
+SQL> select * from instructor;
+
+        ID NAME                 DEPT_NAME                SALARY
+---------- -------------------- -------------------- ----------
+     10101 Srinivasan           Comp. Sci.                71500
+     12121 Wu                   Finance                   99000
+     15151 Mozart               Music                     44000
+     22222 Einstein             Physics                  104500
+     32343 El Said              History                   66000
+     33456 Gold                 Physics                   95700
+     45565 Katz                 Comp. Sci.                82500
+     58583 Califieri            History                   68200
+     76543 Singh                Finance                   88000
+     76766 Crick                Biology                   79200
+     83821 Brandt               Comp. Sci.               101200
+
+        ID NAME                 DEPT_NAME                SALARY
+---------- -------------------- -------------------- ----------
+     98345 Kim                  Elec. Eng.                88000
+
+12 rows selected.
+
+SQL> update course set credits = 4 where dept_name = 'Comp. Sci.';
+
+5 rows updated.
+
+SQL> select * from course;
+
+COURSE_ID  TITLE                DEPT_NAME               CREDITS
+---------- -------------------- -------------------- ----------
+BIO-101    Intro. to Biology    Biology                       4
+BIO-301    Genetics             Biology                       4
+BIO-399    Computation Biology  Biology                       3
+CS-101     Intro. to Comp. Sci. Comp. Sci.                    4
+CS-190     Game Design          Comp. Sci.                    4
+CS-315     Robotics             Comp. Sci.                    4
+CS-319     Image Processing     Comp. Sci.                    4
+CS-347     DB System Concepts   Comp. Sci.                    4
+EE-181     Intro. Dig Systems   Elec. Eng.                    3
+FIN-201    Investment Banking   Finance                       3
+HIS-351    World History        History                       3
+
+COURSE_ID  TITLE                DEPT_NAME               CREDITS
+---------- -------------------- -------------------- ----------
+MU-199     Music Video Prod.    Music                         3
+PHY-101    Physical Principles  Physics                       4
+
+13 rows selected.
+
+SQL> update student set tot_cred = tot_cred + 10 where tot_cred between 20 and 5
+0;
+
+3 rows updated.
+
+SQL> select * from student;
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+       128 Zhang                Comp. Sci.                  102 24-JUL-00
+     12345 Shankar              Comp. Sci.                   42 01-JAN-01
+     19991 Brandt               History                      80 10-JUN-02
+     23121 Chavez               Finance                     110 25-MAY-03
+     44553 Peltier              Physics                      56 30-APR-04
+     45678 Mozart               Physics                      56 27-AUG-99
+     54321 Williams             Comp. Sci.                   54 01-OCT-06
+     55739 Sanchez              Music                        48 07-FEB-95
+     70557 Snow                 Physics                       0 08-APR-08
+     76543 Brown                Comp. Sci.                   58 09-MAR-09
+     76653 Aoi                  Elec. Eng.                   60 10-MAY-10
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+     98765 Bourikas             Elec. Eng.                   98 07-JUN-11
+     98988 Tanaka               Biology                     120 08-APR-12
+
+13 rows selected.
+
+SQL> update instructor set salary = salary * 1.05 where salary < (select avg(sal
+ary) from instructor);
+
+5 rows updated.
+
+SQL> select * from instructor;
+
+        ID NAME                 DEPT_NAME                SALARY
+---------- -------------------- -------------------- ----------
+     10101 Srinivasan           Comp. Sci.                75075
+     12121 Wu                   Finance                   99000
+     15151 Mozart               Music                     46200
+     22222 Einstein             Physics                  104500
+     32343 El Said              History                   69300
+     33456 Gold                 Physics                   95700
+     45565 Katz                 Comp. Sci.                82500
+     58583 Califieri            History                   71610
+     76543 Singh                Finance                   88000
+     76766 Crick                Biology                   83160
+     83821 Brandt               Comp. Sci.               101200
+
+        ID NAME                 DEPT_NAME                SALARY
+---------- -------------------- -------------------- ----------
+     98345 Kim                  Elec. Eng.                88000
+
+12 rows selected.
+
+SQL> update teaches set year = 2010 where course_id = 'CS-101' and semester = 'F
+all';
+
+1 row updated.
+
+SQL> select year from teaches where course_id = 'CS-101' and semester = 'Fall';
+
+      YEAR
+----------
+      2010
+
+SQL> update student set dob = dob - 10*365 where (current_date - dob) < 18*365;
+
+6 rows updated.
+
+SQL> select dob from student;
+
+DOB
+---------
+24-JUL-00
+01-JAN-01
+10-JUN-02
+25-MAY-03
+03-MAY-94
+27-AUG-99
+03-OCT-96
+07-FEB-95
+12-MAR-99
+12-MAY-00
+09-JUN-01
+
+DOB
+---------
+11-APR-02
+
+12 rows selected.
+
+SQL> delete from student where tot_cred = 0;
+
+1 row deleted.
+
+SQL> select * from student;
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+       128 Zhang                Comp. Sci.                  102 24-JUL-00
+     12345 Shankar              Comp. Sci.                   42 01-JAN-01
+     19991 Brandt               History                      80 10-JUN-02
+     23121 Chavez               Finance                     110 25-MAY-03
+     44553 Peltier              Physics                      56 30-APR-04
+     45678 Mozart               Physics                      56 27-AUG-99
+     54321 Williams             Comp. Sci.                   54 01-OCT-06
+     55739 Sanchez              Music                        48 07-FEB-95
+     76543 Brown                Comp. Sci.                   58 09-MAR-09
+     76653 Aoi                  Elec. Eng.                   60 10-MAY-10
+     98765 Bourikas             Elec. Eng.                   98 07-JUN-11
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+     98988 Tanaka               Biology                     120 08-APR-12
+
+12 rows selected.
+
+SQL> delete from instructor where ID like '765%';
+
+1 row deleted.
+
+SQL> select * from instructor;
+
+        ID NAME                 DEPT_NAME                SALARY
+---------- -------------------- -------------------- ----------
+     10101 Srinivasan           Comp. Sci.                75075
+     12121 Wu                   Finance                   99000
+     15151 Mozart               Music                     46200
+     22222 Einstein             Physics                  104500
+     32343 El Said              History                   69300
+     33456 Gold                 Physics                   95700
+     45565 Katz                 Comp. Sci.                82500
+     58583 Califieri            History                   71610
+     76766 Crick                Biology                   83160
+     83821 Brandt               Comp. Sci.               101200
+     98345 Kim                  Elec. Eng.                88000
+
+11 rows selected.
+
+SQL> delete from course where course_id not in (select course_id from section);
+
+1 row deleted.
+
+SQL> select * from course;
+
+COURSE_ID  TITLE                DEPT_NAME               CREDITS
+---------- -------------------- -------------------- ----------
+BIO-101    Intro. to Biology    Biology                       4
+BIO-301    Genetics             Biology                       4
+CS-101     Intro. to Comp. Sci. Comp. Sci.                    4
+CS-190     Game Design          Comp. Sci.                    4
+CS-315     Robotics             Comp. Sci.                    4
+CS-319     Image Processing     Comp. Sci.                    4
+CS-347     DB System Concepts   Comp. Sci.                    4
+EE-181     Intro. Dig Systems   Elec. Eng.                    3
+FIN-201    Investment Banking   Finance                       3
+HIS-351    World History        History                       3
+MU-199     Music Video Prod.    Music                         3
+
+COURSE_ID  TITLE                DEPT_NAME               CREDITS
+---------- -------------------- -------------------- ----------
+PHY-101    Physical Principles  Physics                       4
+
+12 rows selected.

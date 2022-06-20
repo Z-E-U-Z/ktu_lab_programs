@@ -1,0 +1,164 @@
+1.
+ 
+-- set serveroutput on;
+DECLARE
+ 
+message VARCHAR2(20) := 'Hello World!';
+ 
+BEGIN
+  DBMS_OUTPUT.put_line(message);
+END;
+/
+ 
+ 
+2.
+DECLARE
+mark INTEGER;
+BEGIN
+    mark := 53;
+ 
+    DBMS_OUTPUT.put('The Grade Corresponding to '|| mark || ' is: ');
+    IF (mark >= 90) THEN
+        DBMS_OUTPUT.put_line('A+');
+    ELSIF (mark >= 80) THEN
+        DBMS_OUTPUT.put_line('A');
+    ELSIF (mark >= 70) THEN
+        DBMS_OUTPUT.put_line('B+');
+    ELSIF (mark >= 60) THEN
+        DBMS_OUTPUT.put_line('B');
+    ELSIF (mark >= 50) THEN
+        DBMS_OUTPUT.put_line('C+');
+    ELSIF (mark >= 40) THEN
+        DBMS_OUTPUT.put_line('C');
+    ELSE
+        DBMS_OUTPUT.put_line('D');
+    END IF;
+END;
+/
+ 
+ 
+3.
+DECLARE
+     TYPE arr IS varray(5) OF INTEGER;
+     marks1 arr;
+     marks2 arr;
+     no_of_students INTEGER;
+BEGIN
+  marks1 := arr(20,30,40,50,60);
+  marks2 := arr(30,40,50,60,70);
+  no_of_students := marks1.COUNT;
+ 
+  FOR i IN 1..no_of_students LOOP
+    DBMS_OUTPUT.put_line(marks1(i) + marks2(i));
+  END LOOP;
+END;
+/
+ 
+4.
+DECLARE
+    fact INTEGER;
+    n INTEGER;
+    temp INTEGER;
+BEGIN
+  fact := 1;
+  n := &n;
+  temp := n;
+  WHILE(n > 0) LOOP
+    fact := fact * n;
+    n := n - 1;
+  END LOOP;
+  DBMS_OUTPUT.put_line('Factorial is ' ||fact);
+END;
+/
+ 
+ 
+5.
+DECLARE 
+    i INTEGER;
+BEGIN
+  i := 0;
+  LOOP
+    IF(i > 10) THEN
+        EXIT;
+    END IF;
+    DBMS_OUTPUT.put_line('3 x '|| i || ' = '|| 3 * i);
+    i := i + 1;
+  END LOOP;
+END;
+/
+ 
+ 
+6.
+-- drop table result;  
+-- create table result(id int primary key,odd int,even int);
+DECLARE
+    TYPE arr IS varray(5) OF INTEGER;
+    odd arr;
+    even arr;
+BEGIN
+    odd := arr();
+    even := arr();
+    FOR i IN 1..10 LOOP
+        IF (MOD(i,2) = 0) THEN
+            even.extend;
+            even(even.LAST):= i;
+        ELSE
+            odd.extend;
+            odd(odd.LAST) := i;
+        END IF;
+    END LOOP;
+    FOR i IN 1..odd.COUNT LOOP
+        INSERT INTO result (id,odd) VALUES ( i , odd(i));
+    END LOOP;
+    FOR i IN 1..even.COUNT LOOP
+        UPDATE result SET even =  even(i) WHERE id = i;
+    END LOOP;
+END;
+/
+-- select * from result;
+ 
+ 
+7.
+-- drop table result;  
+-- create table result(num int primary key,square int,cube int);
+BEGIN
+    FOR i IN 1..10 LOOP
+        INSERT INTO result VALUES ( i , i*i, i*i*i);
+    END LOOP;
+END;
+/
+-- select * from result;
+ 
+ 
+8.
+-- insert into test values(10,1200);
+ 
+DECLARE
+    cid INTEGER;
+    n INTEGER;
+    emi INTEGER;
+BEGIN
+  cid := &cid;
+  SELECT COUNT(*)
+    INTO n
+    FROM test
+   WHERE id = cid;
+ 
+   IF (n = 1) THEN
+    UPDATE test SET emi = emi * 0.5 WHERE id = cid;
+    SELECT emi
+      INTO emi
+      FROM test
+     WHERE id = cid;
+    DBMS_OUTPUT.put_line('EMI Upadated for cid '|| cid || ' from ' || emi * 2 || ' to ' || emi);
+   ELSE
+    DBMS_OUTPUT.put_line('Record Matching Id ' || cid || ' Absent');
+   END IF;
+ 
+END;
+/
+ 
+
+    -- select * from test;
+
+

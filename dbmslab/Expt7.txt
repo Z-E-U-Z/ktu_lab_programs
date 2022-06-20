@@ -1,0 +1,181 @@
+EXPERIMENT 7
+Amal Nath M
+R5 11
+
+SQL> create view yearwise as select * from section where year = 2009;
+
+View created.
+
+SQL> select * from yearwise;
+
+COURSE_ID      SEC_ID SEMESTER         YEAR
+---------- ---------- ---------- ----------
+BUILDING                                           ROOM_NUMBER
+-------------------------------------------------- -----------
+BIO-101             1 Summer           2009
+Painter                                                    514
+
+CS-101              1 Fall             2009
+Packard                                                    101
+
+CS-190              1 Spring           2009
+Taylor                                                    3128
+
+
+COURSE_ID      SEC_ID SEMESTER         YEAR
+---------- ---------- ---------- ----------
+BUILDING                                           ROOM_NUMBER
+-------------------------------------------------- -----------
+CS-190              2 Spring           2009
+Taylor                                                    3128
+
+CS-347              1 Fall             2009
+Taylor                                                    3128
+
+EE-181              1 Spring           2009
+Taylor                                                    3128
+
+
+COURSE_ID      SEC_ID SEMESTER         YEAR
+---------- ---------- ---------- ----------
+BUILDING                                           ROOM_NUMBER
+-------------------------------------------------- -----------
+PHY-101             1 Fall             2009
+Watson                                                     100
+
+
+7 rows selected.
+
+SQL> create view studentlist as select * from student order by name;
+
+View created.
+
+SQL> select * from studentlist;
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+     11111 Amal                 Biology                     150 30-JUL-01
+     76653 Aoi                  Elec. Eng.                   60 12-MAY-00
+     98765 Bourikas             Elec. Eng.                   98 09-JUN-01
+     19991 Brandt               History                      80 10-JUN-02
+     76543 Brown                Comp. Sci.                   58 12-MAR-99
+     23121 Chavez               Finance                     110 25-MAY-03
+     44553 John                 Physics                      56 03-MAY-94
+     45678 Mozart               Physics                      56 27-AUG-99
+     55739 Sanchez              Music                        48 07-FEB-95
+     12345 Shankar              Comp. Sci.                   42 01-JAN-01
+     98988 Tanaka               Biology                     120 11-APR-02
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+     54321 Williams             Comp. Sci.                   54 03-OCT-96
+       128 Zhang                Comp. Sci.                  102 24-JUL-00
+
+13 rows selected.
+
+SQL> create view teacher as select * from instructor where ID not in (select ID
+from teaches);
+
+View created.
+
+SQL> select * from teacher;
+
+        ID NAME                 DEPT_NAME                SALARY
+---------- -------------------- -------------------- ----------
+     33456 Gold                 Physics                   95700
+     58583 Califieri            History                   71610
+
+SQL> insert into studentlist (ID) values (99999);
+
+1 row created.
+
+SQL> select * from studentlist;
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+     11111 Amal                 Biology                     150 30-JUL-01
+     76653 Aoi                  Elec. Eng.                   60 12-MAY-00
+     98765 Bourikas             Elec. Eng.                   98 09-JUN-01
+     19991 Brandt               History                      80 10-JUN-02
+     76543 Brown                Comp. Sci.                   58 12-MAR-99
+     23121 Chavez               Finance                     110 25-MAY-03
+     44553 John                 Physics                      56 03-MAY-94
+     45678 Mozart               Physics                      56 27-AUG-99
+     55739 Sanchez              Music                        48 07-FEB-95
+     12345 Shankar              Comp. Sci.                   42 01-JAN-01
+     98988 Tanaka               Biology                     120 11-APR-02
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+     54321 Williams             Comp. Sci.                   54 03-OCT-96
+       128 Zhang                Comp. Sci.                  102 24-JUL-00
+     99999
+
+14 rows selected.
+
+SQL> update studentlist set name = 'Saviour' where ID = 99999;
+
+1 row updated.
+
+SQL> select * from studentlist;
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+     11111 Amal                 Biology                     150 30-JUL-01
+     76653 Aoi                  Elec. Eng.                   60 12-MAY-00
+     98765 Bourikas             Elec. Eng.                   98 09-JUN-01
+     19991 Brandt               History                      80 10-JUN-02
+     76543 Brown                Comp. Sci.                   58 12-MAR-99
+     23121 Chavez               Finance                     110 25-MAY-03
+     44553 John                 Physics                      56 03-MAY-94
+     45678 Mozart               Physics                      56 27-AUG-99
+     55739 Sanchez              Music                        48 07-FEB-95
+     99999 Saviour
+     12345 Shankar              Comp. Sci.                   42 01-JAN-01
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+     98988 Tanaka               Biology                     120 11-APR-02
+     54321 Williams             Comp. Sci.                   54 03-OCT-96
+       128 Zhang                Comp. Sci.                  102 24-JUL-00
+
+14 rows selected.
+
+SQL> delete from studentlist where ID = 99999;
+
+1 row deleted.
+
+SQL> select * from studentlist;
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+     11111 Amal                 Biology                     150 30-JUL-01
+     76653 Aoi                  Elec. Eng.                   60 12-MAY-00
+     98765 Bourikas             Elec. Eng.                   98 09-JUN-01
+     19991 Brandt               History                      80 10-JUN-02
+     76543 Brown                Comp. Sci.                   58 12-MAR-99
+     23121 Chavez               Finance                     110 25-MAY-03
+     44553 John                 Physics                      56 03-MAY-94
+     45678 Mozart               Physics                      56 27-AUG-99
+     55739 Sanchez              Music                        48 07-FEB-95
+     12345 Shankar              Comp. Sci.                   42 01-JAN-01
+     98988 Tanaka               Biology                     120 11-APR-02
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+     54321 Williams             Comp. Sci.                   54 03-OCT-96
+       128 Zhang                Comp. Sci.                  102 24-JUL-00
+
+13 rows selected.
+
+SQL> drop view yearwise;
+
+View dropped.
+
+SQL> drop view studentlist;
+
+View dropped.
+
+SQL> drop view teacher;
+
+View dropped.

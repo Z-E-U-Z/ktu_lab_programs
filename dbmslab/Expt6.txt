@@ -1,0 +1,2463 @@
+EXPERIMENT 6
+Amal Nath M
+R5 11
+
+SQL> select 'grant select on teaches to ' || username || ';' from all_users;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to EXAM81;
+grant select on teaches to EXAM79;
+grant select on teaches to EXAM78;
+grant select on teaches to EXAM77;
+grant select on teaches to EXAM76;
+grant select on teaches to EXAM75;
+grant select on teaches to EXAM74;
+grant select on teaches to EXAM73;
+grant select on teaches to EXAM72;
+grant select on teaches to EXAM71;
+grant select on teaches to EXAM70;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to EXAM69;
+grant select on teaches to EXAM68;
+grant select on teaches to EXAM67;
+grant select on teaches to EXAM66;
+grant select on teaches to EXAM65;
+grant select on teaches to EXAM64;
+grant select on teaches to EXAM63;
+grant select on teaches to EXAM62;
+grant select on teaches to EXAM61;
+grant select on teaches to EXAM60;
+grant select on teaches to EXAM80;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to EXAM58;
+grant select on teaches to EXAM57;
+grant select on teaches to EXAM56;
+grant select on teaches to EXAM55;
+grant select on teaches to EXAM54;
+grant select on teaches to EXAM53;
+grant select on teaches to EXAM52;
+grant select on teaches to EXAM51;
+grant select on teaches to EXAM50;
+grant select on teaches to EXAM49;
+grant select on teaches to EXAM48;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to EXAM47;
+grant select on teaches to EXAM46;
+grant select on teaches to EXAM45;
+grant select on teaches to EXAM44;
+grant select on teaches to EXAM43;
+grant select on teaches to EXAM42;
+grant select on teaches to EXAM41;
+grant select on teaches to EXAM40;
+grant select on teaches to EXAM39;
+grant select on teaches to EXAM59;
+grant select on teaches to EXAM37;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to EXAM36;
+grant select on teaches to EXAM35;
+grant select on teaches to EXAM34;
+grant select on teaches to EXAM33;
+grant select on teaches to EXAM32;
+grant select on teaches to EXAM31;
+grant select on teaches to EXAM30;
+grant select on teaches to EXAM29;
+grant select on teaches to EXAM28;
+grant select on teaches to EXAM27;
+grant select on teaches to EXAM26;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to EXAM25;
+grant select on teaches to EXAM24;
+grant select on teaches to EXAM23;
+grant select on teaches to EXAM22;
+grant select on teaches to EXAM21;
+grant select on teaches to EXAM20;
+grant select on teaches to EXAM19;
+grant select on teaches to EXAM18;
+grant select on teaches to EXAM38;
+grant select on teaches to EXAM16;
+grant select on teaches to EXAM15;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to EXAM14;
+grant select on teaches to EXAM13;
+grant select on teaches to EXAM12;
+grant select on teaches to EXAM11;
+grant select on teaches to EXAM10;
+grant select on teaches to EXAM09;
+grant select on teaches to EXAM08;
+grant select on teaches to EXAM07;
+grant select on teaches to EXAM06;
+grant select on teaches to EXAM05;
+grant select on teaches to EXAM04;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to EXAM03;
+grant select on teaches to EXAM02;
+grant select on teaches to EXAM01;
+grant select on teaches to R505;
+grant select on teaches to R516;
+grant select on teaches to R515;
+grant select on teaches to R581;
+grant select on teaches to EXAM17;
+grant select on teaches to R579;
+grant select on teaches to R578;
+grant select on teaches to R577;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to R576;
+grant select on teaches to R575;
+grant select on teaches to R574;
+grant select on teaches to R573;
+grant select on teaches to R572;
+grant select on teaches to R571;
+grant select on teaches to R570;
+grant select on teaches to R569;
+grant select on teaches to R568;
+grant select on teaches to R567;
+grant select on teaches to R566;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to R565;
+grant select on teaches to R564;
+grant select on teaches to R563;
+grant select on teaches to R562;
+grant select on teaches to R561;
+grant select on teaches to R560;
+grant select on teaches to R580;
+grant select on teaches to R558;
+grant select on teaches to R557;
+grant select on teaches to R556;
+grant select on teaches to R555;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to R554;
+grant select on teaches to R553;
+grant select on teaches to R552;
+grant select on teaches to R551;
+grant select on teaches to R550;
+grant select on teaches to R549;
+grant select on teaches to R548;
+grant select on teaches to R547;
+grant select on teaches to R546;
+grant select on teaches to R545;
+grant select on teaches to R544;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to R543;
+grant select on teaches to R542;
+grant select on teaches to R541;
+grant select on teaches to R540;
+grant select on teaches to R539;
+grant select on teaches to R559;
+grant select on teaches to R537;
+grant select on teaches to R536;
+grant select on teaches to R535;
+grant select on teaches to R534;
+grant select on teaches to R533;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to R532;
+grant select on teaches to R531;
+grant select on teaches to R530;
+grant select on teaches to R529;
+grant select on teaches to R528;
+grant select on teaches to R527;
+grant select on teaches to R526;
+grant select on teaches to R525;
+grant select on teaches to R524;
+grant select on teaches to R523;
+grant select on teaches to R522;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to R521;
+grant select on teaches to R520;
+grant select on teaches to R519;
+grant select on teaches to R518;
+grant select on teaches to R538;
+grant select on teaches to R514;
+grant select on teaches to R513;
+grant select on teaches to R512;
+grant select on teaches to R511;
+grant select on teaches to R510;
+grant select on teaches to R509;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to R508;
+grant select on teaches to R507;
+grant select on teaches to R506;
+grant select on teaches to R504;
+grant select on teaches to R503;
+grant select on teaches to R502;
+grant select on teaches to R205;
+grant select on teaches to R501;
+grant select on teaches to ANVER;
+grant select on teaches to SCOTT;
+grant select on teaches to OWBSYS_AUDIT;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to R517;
+grant select on teaches to OWBSYS;
+grant select on teaches to APEX_030200;
+grant select on teaches to APEX_PUBLIC_USER;
+grant select on teaches to FLOWS_FILES;
+grant select on teaches to MGMT_VIEW;
+grant select on teaches to SYSMAN;
+grant select on teaches to SPATIAL_CSW_ADMIN_USR;
+grant select on teaches to SPATIAL_WFS_ADMIN_USR;
+grant select on teaches to MDDATA;
+grant select on teaches to MDSYS;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to SI_INFORMTN_SCHEMA;
+grant select on teaches to ORDPLUGINS;
+grant select on teaches to ORDDATA;
+grant select on teaches to ORDSYS;
+grant select on teaches to OLAPSYS;
+grant select on teaches to ANONYMOUS;
+grant select on teaches to XDB;
+grant select on teaches to CTXSYS;
+grant select on teaches to EXFSYS;
+grant select on teaches to XS$NULL;
+grant select on teaches to WMSYS;
+
+'GRANTSELECTONTEACHESTO'||USERNAME||';'
+----------------------------------------------------------
+grant select on teaches to APPQOSSYS;
+grant select on teaches to DBSNMP;
+grant select on teaches to ORACLE_OCM;
+grant select on teaches to DIP;
+grant select on teaches to OUTLN;
+grant select on teaches to SYSTEM;
+grant select on teaches to SYS;
+
+194 rows selected.
+
+SQL> grant select on teaches to EXAM81;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM79;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM78;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM77;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM76;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM75;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM74;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM73;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM72;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM71;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM70;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to EXAM69;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM68;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM67;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM66;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM65;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM64;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM63;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM62;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM61;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM60;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM80;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to EXAM58;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM57;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM56;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM55;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM54;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM53;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM52;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM51;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM50;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM49;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM48;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to EXAM47;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM46;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM45;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM44;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM43;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM42;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM41;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM40;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM39;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM59;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM37;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to EXAM36;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM35;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM34;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM33;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM32;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM31;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM30;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM29;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM28;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM27;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM26;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to EXAM25;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM24;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM23;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM22;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM21;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM20;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM19;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM18;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM38;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM16;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM15;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to EXAM14;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM13;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM12;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM11;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM10;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM09;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM08;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM07;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM06;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM05;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM04;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to EXAM03;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM02;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM01;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R505;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R516;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R515;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R581;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXAM17;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R579;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R578;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R577;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to R576;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R575;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R574;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R573;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R572;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R571;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R570;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R569;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R568;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R567;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R566;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to R565;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R564;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R563;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R562;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R561;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R560;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R580;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R558;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R557;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R556;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R555;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to R554;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R553;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R552;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R551;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R550;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R549;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R548;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R547;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R546;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R545;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R544;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to R543;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R542;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R541;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R540;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R539;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R559;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R537;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R536;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R535;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R534;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R533;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to R532;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R531;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R530;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R529;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R528;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R527;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R526;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R525;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R524;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R523;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R522;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to R521;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R520;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R519;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R518;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R538;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R514;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R513;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R512;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R511;
+grant select on teaches to R511
+                           *
+ERROR at line 1:
+ORA-01749: you may not GRANT/REVOKE privileges to/from yourself
+
+
+SQL> grant select on teaches to R510;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R509;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to R508;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R507;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R506;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R504;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R503;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R502;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R205;
+
+Grant succeeded.
+
+SQL> grant select on teaches to R501;
+
+Grant succeeded.
+
+SQL> grant select on teaches to ANVER;
+
+Grant succeeded.
+
+SQL> grant select on teaches to SCOTT;
+
+Grant succeeded.
+
+SQL> grant select on teaches to OWBSYS_AUDIT;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to R517;
+
+Grant succeeded.
+
+SQL> grant select on teaches to OWBSYS;
+
+Grant succeeded.
+
+SQL> grant select on teaches to APEX_030200;
+
+Grant succeeded.
+
+SQL> grant select on teaches to APEX_PUBLIC_USER;
+
+Grant succeeded.
+
+SQL> grant select on teaches to FLOWS_FILES;
+
+Grant succeeded.
+
+SQL> grant select on teaches to MGMT_VIEW;
+
+Grant succeeded.
+
+SQL> grant select on teaches to SYSMAN;
+
+Grant succeeded.
+
+SQL> grant select on teaches to SPATIAL_CSW_ADMIN_USR;
+
+Grant succeeded.
+
+SQL> grant select on teaches to SPATIAL_WFS_ADMIN_USR;
+
+Grant succeeded.
+
+SQL> grant select on teaches to MDDATA;
+
+Grant succeeded.
+
+SQL> grant select on teaches to MDSYS;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to SI_INFORMTN_SCHEMA;
+
+Grant succeeded.
+
+SQL> grant select on teaches to ORDPLUGINS;
+
+Grant succeeded.
+
+SQL> grant select on teaches to ORDDATA;
+
+Grant succeeded.
+
+SQL> grant select on teaches to ORDSYS;
+
+Grant succeeded.
+
+SQL> grant select on teaches to OLAPSYS;
+
+Grant succeeded.
+
+SQL> grant select on teaches to ANONYMOUS;
+
+Grant succeeded.
+
+SQL> grant select on teaches to XDB;
+
+Grant succeeded.
+
+SQL> grant select on teaches to CTXSYS;
+
+Grant succeeded.
+
+SQL> grant select on teaches to EXFSYS;
+
+Grant succeeded.
+
+SQL> grant select on teaches to XS$NULL;
+
+Grant succeeded.
+
+SQL> grant select on teaches to WMSYS;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTSELECTONTEACHESTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTSELE..." - rest of line ignored.
+SQL> ----------------------------------------------------------
+SQL> grant select on teaches to APPQOSSYS;
+
+Grant succeeded.
+
+SQL> grant select on teaches to DBSNMP;
+
+Grant succeeded.
+
+SQL> grant select on teaches to ORACLE_OCM;
+
+Grant succeeded.
+
+SQL> grant select on teaches to DIP;
+
+Grant succeeded.
+
+SQL> grant select on teaches to OUTLN;
+
+Grant succeeded.
+
+SQL> grant select on teaches to SYSTEM;
+
+Grant succeeded.
+
+SQL> grant select on teaches to SYS;
+
+Grant succeeded.
+
+SQL> SELECT 'GRANT ALL PRIVILEGES ON subject TO ' || username || ';' FROM all_us
+ers;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO EXAM81;
+GRANT ALL PRIVILEGES ON subject TO EXAM79;
+GRANT ALL PRIVILEGES ON subject TO EXAM78;
+GRANT ALL PRIVILEGES ON subject TO EXAM77;
+GRANT ALL PRIVILEGES ON subject TO EXAM76;
+GRANT ALL PRIVILEGES ON subject TO EXAM75;
+GRANT ALL PRIVILEGES ON subject TO EXAM74;
+GRANT ALL PRIVILEGES ON subject TO EXAM73;
+GRANT ALL PRIVILEGES ON subject TO EXAM72;
+GRANT ALL PRIVILEGES ON subject TO EXAM71;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO EXAM70;
+GRANT ALL PRIVILEGES ON subject TO EXAM69;
+GRANT ALL PRIVILEGES ON subject TO EXAM68;
+GRANT ALL PRIVILEGES ON subject TO EXAM67;
+GRANT ALL PRIVILEGES ON subject TO EXAM66;
+GRANT ALL PRIVILEGES ON subject TO EXAM65;
+GRANT ALL PRIVILEGES ON subject TO EXAM64;
+GRANT ALL PRIVILEGES ON subject TO EXAM63;
+GRANT ALL PRIVILEGES ON subject TO EXAM62;
+GRANT ALL PRIVILEGES ON subject TO EXAM61;
+GRANT ALL PRIVILEGES ON subject TO EXAM60;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO EXAM80;
+GRANT ALL PRIVILEGES ON subject TO EXAM58;
+GRANT ALL PRIVILEGES ON subject TO EXAM57;
+GRANT ALL PRIVILEGES ON subject TO EXAM56;
+GRANT ALL PRIVILEGES ON subject TO EXAM55;
+GRANT ALL PRIVILEGES ON subject TO EXAM54;
+GRANT ALL PRIVILEGES ON subject TO EXAM53;
+GRANT ALL PRIVILEGES ON subject TO EXAM52;
+GRANT ALL PRIVILEGES ON subject TO EXAM51;
+GRANT ALL PRIVILEGES ON subject TO EXAM50;
+GRANT ALL PRIVILEGES ON subject TO EXAM49;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO EXAM48;
+GRANT ALL PRIVILEGES ON subject TO EXAM47;
+GRANT ALL PRIVILEGES ON subject TO EXAM46;
+GRANT ALL PRIVILEGES ON subject TO EXAM45;
+GRANT ALL PRIVILEGES ON subject TO EXAM44;
+GRANT ALL PRIVILEGES ON subject TO EXAM43;
+GRANT ALL PRIVILEGES ON subject TO EXAM42;
+GRANT ALL PRIVILEGES ON subject TO EXAM41;
+GRANT ALL PRIVILEGES ON subject TO EXAM40;
+GRANT ALL PRIVILEGES ON subject TO EXAM39;
+GRANT ALL PRIVILEGES ON subject TO EXAM59;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO EXAM37;
+GRANT ALL PRIVILEGES ON subject TO EXAM36;
+GRANT ALL PRIVILEGES ON subject TO EXAM35;
+GRANT ALL PRIVILEGES ON subject TO EXAM34;
+GRANT ALL PRIVILEGES ON subject TO EXAM33;
+GRANT ALL PRIVILEGES ON subject TO EXAM32;
+GRANT ALL PRIVILEGES ON subject TO EXAM31;
+GRANT ALL PRIVILEGES ON subject TO EXAM30;
+GRANT ALL PRIVILEGES ON subject TO EXAM29;
+GRANT ALL PRIVILEGES ON subject TO EXAM28;
+GRANT ALL PRIVILEGES ON subject TO EXAM27;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO EXAM26;
+GRANT ALL PRIVILEGES ON subject TO EXAM25;
+GRANT ALL PRIVILEGES ON subject TO EXAM24;
+GRANT ALL PRIVILEGES ON subject TO EXAM23;
+GRANT ALL PRIVILEGES ON subject TO EXAM22;
+GRANT ALL PRIVILEGES ON subject TO EXAM21;
+GRANT ALL PRIVILEGES ON subject TO EXAM20;
+GRANT ALL PRIVILEGES ON subject TO EXAM19;
+GRANT ALL PRIVILEGES ON subject TO EXAM18;
+GRANT ALL PRIVILEGES ON subject TO EXAM38;
+GRANT ALL PRIVILEGES ON subject TO EXAM16;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO EXAM15;
+GRANT ALL PRIVILEGES ON subject TO EXAM14;
+GRANT ALL PRIVILEGES ON subject TO EXAM13;
+GRANT ALL PRIVILEGES ON subject TO EXAM12;
+GRANT ALL PRIVILEGES ON subject TO EXAM11;
+GRANT ALL PRIVILEGES ON subject TO EXAM10;
+GRANT ALL PRIVILEGES ON subject TO EXAM09;
+GRANT ALL PRIVILEGES ON subject TO EXAM08;
+GRANT ALL PRIVILEGES ON subject TO EXAM07;
+GRANT ALL PRIVILEGES ON subject TO EXAM06;
+GRANT ALL PRIVILEGES ON subject TO EXAM05;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO EXAM04;
+GRANT ALL PRIVILEGES ON subject TO EXAM03;
+GRANT ALL PRIVILEGES ON subject TO EXAM02;
+GRANT ALL PRIVILEGES ON subject TO EXAM01;
+GRANT ALL PRIVILEGES ON subject TO R505;
+GRANT ALL PRIVILEGES ON subject TO R516;
+GRANT ALL PRIVILEGES ON subject TO R515;
+GRANT ALL PRIVILEGES ON subject TO R581;
+GRANT ALL PRIVILEGES ON subject TO EXAM17;
+GRANT ALL PRIVILEGES ON subject TO R579;
+GRANT ALL PRIVILEGES ON subject TO R578;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO R577;
+GRANT ALL PRIVILEGES ON subject TO R576;
+GRANT ALL PRIVILEGES ON subject TO R575;
+GRANT ALL PRIVILEGES ON subject TO R574;
+GRANT ALL PRIVILEGES ON subject TO R573;
+GRANT ALL PRIVILEGES ON subject TO R572;
+GRANT ALL PRIVILEGES ON subject TO R571;
+GRANT ALL PRIVILEGES ON subject TO R570;
+GRANT ALL PRIVILEGES ON subject TO R569;
+GRANT ALL PRIVILEGES ON subject TO R568;
+GRANT ALL PRIVILEGES ON subject TO R567;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO R566;
+GRANT ALL PRIVILEGES ON subject TO R565;
+GRANT ALL PRIVILEGES ON subject TO R564;
+GRANT ALL PRIVILEGES ON subject TO R563;
+GRANT ALL PRIVILEGES ON subject TO R562;
+GRANT ALL PRIVILEGES ON subject TO R561;
+GRANT ALL PRIVILEGES ON subject TO R560;
+GRANT ALL PRIVILEGES ON subject TO R580;
+GRANT ALL PRIVILEGES ON subject TO R558;
+GRANT ALL PRIVILEGES ON subject TO R557;
+GRANT ALL PRIVILEGES ON subject TO R556;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO R555;
+GRANT ALL PRIVILEGES ON subject TO R554;
+GRANT ALL PRIVILEGES ON subject TO R553;
+GRANT ALL PRIVILEGES ON subject TO R552;
+GRANT ALL PRIVILEGES ON subject TO R551;
+GRANT ALL PRIVILEGES ON subject TO R550;
+GRANT ALL PRIVILEGES ON subject TO R549;
+GRANT ALL PRIVILEGES ON subject TO R548;
+GRANT ALL PRIVILEGES ON subject TO R547;
+GRANT ALL PRIVILEGES ON subject TO R546;
+GRANT ALL PRIVILEGES ON subject TO R545;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO R544;
+GRANT ALL PRIVILEGES ON subject TO R543;
+GRANT ALL PRIVILEGES ON subject TO R542;
+GRANT ALL PRIVILEGES ON subject TO R541;
+GRANT ALL PRIVILEGES ON subject TO R540;
+GRANT ALL PRIVILEGES ON subject TO R539;
+GRANT ALL PRIVILEGES ON subject TO R559;
+GRANT ALL PRIVILEGES ON subject TO R537;
+GRANT ALL PRIVILEGES ON subject TO R536;
+GRANT ALL PRIVILEGES ON subject TO R535;
+GRANT ALL PRIVILEGES ON subject TO R534;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO R533;
+GRANT ALL PRIVILEGES ON subject TO R532;
+GRANT ALL PRIVILEGES ON subject TO R531;
+GRANT ALL PRIVILEGES ON subject TO R530;
+GRANT ALL PRIVILEGES ON subject TO R529;
+GRANT ALL PRIVILEGES ON subject TO R528;
+GRANT ALL PRIVILEGES ON subject TO R527;
+GRANT ALL PRIVILEGES ON subject TO R526;
+GRANT ALL PRIVILEGES ON subject TO R525;
+GRANT ALL PRIVILEGES ON subject TO R524;
+GRANT ALL PRIVILEGES ON subject TO R523;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO R522;
+GRANT ALL PRIVILEGES ON subject TO R521;
+GRANT ALL PRIVILEGES ON subject TO R520;
+GRANT ALL PRIVILEGES ON subject TO R519;
+GRANT ALL PRIVILEGES ON subject TO R518;
+GRANT ALL PRIVILEGES ON subject TO R538;
+GRANT ALL PRIVILEGES ON subject TO R514;
+GRANT ALL PRIVILEGES ON subject TO R513;
+GRANT ALL PRIVILEGES ON subject TO R512;
+GRANT ALL PRIVILEGES ON subject TO R511;
+GRANT ALL PRIVILEGES ON subject TO R510;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO R509;
+GRANT ALL PRIVILEGES ON subject TO R508;
+GRANT ALL PRIVILEGES ON subject TO R507;
+GRANT ALL PRIVILEGES ON subject TO R506;
+GRANT ALL PRIVILEGES ON subject TO R504;
+GRANT ALL PRIVILEGES ON subject TO R503;
+GRANT ALL PRIVILEGES ON subject TO R502;
+GRANT ALL PRIVILEGES ON subject TO R205;
+GRANT ALL PRIVILEGES ON subject TO R501;
+GRANT ALL PRIVILEGES ON subject TO ANVER;
+GRANT ALL PRIVILEGES ON subject TO SCOTT;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO OWBSYS_AUDIT;
+GRANT ALL PRIVILEGES ON subject TO R517;
+GRANT ALL PRIVILEGES ON subject TO OWBSYS;
+GRANT ALL PRIVILEGES ON subject TO APEX_030200;
+GRANT ALL PRIVILEGES ON subject TO APEX_PUBLIC_USER;
+GRANT ALL PRIVILEGES ON subject TO FLOWS_FILES;
+GRANT ALL PRIVILEGES ON subject TO MGMT_VIEW;
+GRANT ALL PRIVILEGES ON subject TO SYSMAN;
+GRANT ALL PRIVILEGES ON subject TO SPATIAL_CSW_ADMIN_USR;
+GRANT ALL PRIVILEGES ON subject TO SPATIAL_WFS_ADMIN_USR;
+GRANT ALL PRIVILEGES ON subject TO MDDATA;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO MDSYS;
+GRANT ALL PRIVILEGES ON subject TO SI_INFORMTN_SCHEMA;
+GRANT ALL PRIVILEGES ON subject TO ORDPLUGINS;
+GRANT ALL PRIVILEGES ON subject TO ORDDATA;
+GRANT ALL PRIVILEGES ON subject TO ORDSYS;
+GRANT ALL PRIVILEGES ON subject TO OLAPSYS;
+GRANT ALL PRIVILEGES ON subject TO ANONYMOUS;
+GRANT ALL PRIVILEGES ON subject TO XDB;
+GRANT ALL PRIVILEGES ON subject TO CTXSYS;
+GRANT ALL PRIVILEGES ON subject TO EXFSYS;
+GRANT ALL PRIVILEGES ON subject TO XS$NULL;
+
+'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+------------------------------------------------------------------
+GRANT ALL PRIVILEGES ON subject TO WMSYS;
+GRANT ALL PRIVILEGES ON subject TO APPQOSSYS;
+GRANT ALL PRIVILEGES ON subject TO DBSNMP;
+GRANT ALL PRIVILEGES ON subject TO ORACLE_OCM;
+GRANT ALL PRIVILEGES ON subject TO DIP;
+GRANT ALL PRIVILEGES ON subject TO OUTLN;
+GRANT ALL PRIVILEGES ON subject TO SYSTEM;
+GRANT ALL PRIVILEGES ON subject TO SYS;
+
+195 rows selected.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM81;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM79;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM78;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM77;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM76;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM75;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM74;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM73;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM72;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM71;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM70;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM69;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM68;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM67;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM66;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM65;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM64;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM63;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM62;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM61;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM60;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM80;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM58;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM57;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM56;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM55;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM54;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM53;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM52;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM51;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM50;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM49;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM48;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM47;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM46;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM45;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM44;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM43;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM42;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM41;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM40;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM39;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM59;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM37;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM36;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM35;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM34;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM33;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM32;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM31;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM30;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM29;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM28;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM27;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM26;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM25;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM24;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM23;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM22;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM21;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM20;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM19;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM18;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM38;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM16;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM15;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM14;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM13;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM12;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM11;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM10;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM09;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM08;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM07;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM06;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM05;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM04;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM03;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM02;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM01;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R505;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R516;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R515;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R581;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXAM17;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R579;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R578;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO R577;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R576;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R575;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R574;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R573;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R572;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R571;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R570;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R569;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R568;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R567;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO R566;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R565;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R564;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R563;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R562;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R561;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R560;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R580;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R558;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R557;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R556;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO R555;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R554;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R553;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R552;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R551;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R550;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R549;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R548;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R547;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R546;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R545;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO R544;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R543;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R542;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R541;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R540;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R539;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R559;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R537;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R536;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R535;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R534;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO R533;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R532;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R531;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R530;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R529;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R528;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R527;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R526;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R525;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R524;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R523;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO R522;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R521;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R520;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R519;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R518;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R538;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R514;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R513;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R512;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R511;
+GRANT ALL PRIVILEGES ON subject TO R511
+                                   *
+ERROR at line 1:
+ORA-01749: you may not GRANT/REVOKE privileges to/from yourself
+
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R510;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO R509;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R508;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R507;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R506;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R504;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R503;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R502;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R205;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R501;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO ANVER;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO SCOTT;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO OWBSYS_AUDIT;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO R517;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO OWBSYS;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO APEX_030200;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO APEX_PUBLIC_USER;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO FLOWS_FILES;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO MGMT_VIEW;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO SYSMAN;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO SPATIAL_CSW_ADMIN_USR;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO SPATIAL_WFS_ADMIN_USR;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO MDDATA;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO MDSYS;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO SI_INFORMTN_SCHEMA;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO ORDPLUGINS;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO ORDDATA;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO ORDSYS;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO OLAPSYS;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO ANONYMOUS;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO XDB;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO CTXSYS;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO EXFSYS;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO XS$NULL;
+
+Grant succeeded.
+
+SQL>
+SQL> 'GRANTALLPRIVILEGESONSUBJECTTO'||USERNAME||';'
+SP2-0734: unknown command beginning "'GRANTALLP..." - rest of line ignored.
+SQL> ------------------------------------------------------------------
+SQL> GRANT ALL PRIVILEGES ON subject TO WMSYS;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO APPQOSSYS;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO DBSNMP;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO ORACLE_OCM;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO DIP;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO OUTLN;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO SYSTEM;
+
+Grant succeeded.
+
+SQL> GRANT ALL PRIVILEGES ON subject TO SYS;
+
+Grant succeeded.
+
+SQL> select * from user_sys_privs;
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           ADMINISTER SQL MANAGEMENT OBJECT         NO
+R511                           DROP ANY MEASURE FOLDER                  NO
+R511                           ALTER ANY CUBE                           NO
+R511                           SELECT ANY CUBE DIMENSION                NO
+R511                           INSERT ANY CUBE DIMENSION                NO
+R511                           CREATE ANY CUBE DIMENSION                NO
+R511                           ALTER ANY CUBE DIMENSION                 NO
+R511                           CREATE ANY MINING MODEL                  NO
+R511                           DROP ANY ASSEMBLY                        NO
+R511                           CREATE ANY EDITION                       NO
+R511                           DROP ANY RULE SET                        YES
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           MERGE ANY VIEW                           YES
+R511                           ADMINISTER RESOURCE MANAGER              NO
+R511                           MANAGE ANY QUEUE                         NO
+R511                           UNDER ANY TABLE                          YES
+R511                           CREATE TYPE                              YES
+R511                           CREATE ANY DIRECTORY                     NO
+R511                           EXECUTE ANY PROCEDURE                    YES
+R511                           GRANT ANY ROLE                           YES
+R511                           CREATE PUBLIC SYNONYM                    NO
+R511                           UPDATE ANY TABLE                         YES
+R511                           ALTER ROLLBACK SEGMENT                   NO
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           BECOME USER                              NO
+R511                           CREATE USER                              NO
+R511                           FLASHBACK ARCHIVE ADMINISTER             NO
+R511                           UPDATE ANY CUBE DIMENSION                NO
+R511                           COMMENT ANY MINING MODEL                 NO
+R511                           CREATE MINING MODEL                      NO
+R511                           EXECUTE ANY ASSEMBLY                     NO
+R511                           ALTER ANY ASSEMBLY                       NO
+R511                           MANAGE SCHEDULER                         NO
+R511                           CREATE ANY RULE SET                      YES
+R511                           DROP ANY EVALUATION CONTEXT              NO
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           GRANT ANY OBJECT PRIVILEGE               NO
+R511                           FLASHBACK ANY TABLE                      YES
+R511                           DEBUG CONNECT SESSION                    NO
+R511                           ADMINISTER DATABASE TRIGGER              NO
+R511                           DROP ANY OUTLINE                         NO
+R511                           QUERY REWRITE                            NO
+R511                           CREATE ANY INDEXTYPE                     YES
+R511                           DROP ANY OPERATOR                        NO
+R511                           DROP ANY TRIGGER                         YES
+R511                           ALTER ANY ROLE                           YES
+R511                           CREATE ROLE                              YES
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           CREATE ANY SEQUENCE                      YES
+R511                           DROP ANY VIEW                            YES
+R511                           DROP ANY CLUSTER                         NO
+R511                           COMMENT ANY TABLE                        YES
+R511                           ALTER ANY TABLE                          YES
+R511                           ALTER TABLESPACE                         YES
+R511                           CREATE SESSION                           YES
+R511                           INSERT ANY MEASURE FOLDER                NO
+R511                           CREATE CUBE                              NO
+R511                           DROP ANY MINING MODEL                    NO
+R511                           READ ANY FILE GROUP                      NO
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           CREATE ANY SQL PROFILE                   NO
+R511                           ADVISOR                                  NO
+R511                           IMPORT FULL DATABASE                     NO
+R511                           ALTER ANY RULE SET                       YES
+R511                           CREATE ANY CONTEXT                       NO
+R511                           ENQUEUE ANY QUEUE                        NO
+R511                           CREATE DIMENSION                         NO
+R511                           ALTER ANY OPERATOR                       NO
+R511                           CREATE ANY OPERATOR                      NO
+R511                           CREATE OPERATOR                          NO
+R511                           EXECUTE ANY LIBRARY                      NO
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           DROP ANY DIRECTORY                       NO
+R511                           CREATE MATERIALIZED VIEW                 NO
+R511                           ALTER RESOURCE COST                      NO
+R511                           CREATE TRIGGER                           YES
+R511                           ALTER DATABASE                           NO
+R511                           CREATE ANY VIEW                          YES
+R511                           ALTER ANY CLUSTER                        NO
+R511                           DROP ANY TABLE                           YES
+R511                           BACKUP ANY TABLE                         YES
+R511                           CREATE ROLLBACK SEGMENT                  YES
+R511                           UNLIMITED TABLESPACE                     YES
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           CREATE ANY CUBE BUILD PROCESS            NO
+R511                           CREATE ANY MEASURE FOLDER                NO
+R511                           DROP ANY CUBE                            NO
+R511                           ALTER ANY MINING MODEL                   NO
+R511                           CREATE EXTERNAL JOB                      NO
+R511                           MANAGE FILE GROUP                        NO
+R511                           EXECUTE ANY CLASS                        NO
+R511                           CREATE ANY JOB                           NO
+R511                           CREATE JOB                               NO
+R511                           CREATE ANY EVALUATION CONTEXT            NO
+R511                           CREATE EVALUATION CONTEXT                NO
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           DEBUG ANY PROCEDURE                      YES
+R511                           DROP ANY CONTEXT                         NO
+R511                           DROP ANY DIMENSION                       NO
+R511                           DROP ANY INDEXTYPE                       YES
+R511                           ALTER ANY INDEXTYPE                      YES
+R511                           ALTER ANY LIBRARY                        NO
+R511                           CREATE ANY LIBRARY                       NO
+R511                           CREATE LIBRARY                           NO
+R511                           EXECUTE ANY TYPE                         YES
+R511                           ALTER ANY MATERIALIZED VIEW              NO
+R511                           CREATE ANY TRIGGER                       YES
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           FORCE ANY TRANSACTION                    NO
+R511                           FORCE TRANSACTION                        NO
+R511                           DROP ANY SEQUENCE                        NO
+R511                           DROP PUBLIC SYNONYM                      NO
+R511                           ALTER ANY INDEX                          YES
+R511                           INSERT ANY TABLE                         YES
+R511                           CREATE TABLE                             YES
+R511                           ALTER USER                               NO
+R511                           UPDATE ANY CUBE BUILD PROCESS            NO
+R511                           DROP ANY CUBE BUILD PROCESS              NO
+R511                           DELETE ANY MEASURE FOLDER                NO
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           UPDATE ANY CUBE                          NO
+R511                           CREATE CUBE DIMENSION                    NO
+R511                           SELECT ANY MINING MODEL                  NO
+R511                           CREATE ANY ASSEMBLY                      NO
+R511                           ALTER ANY EDITION                        NO
+R511                           CHANGE NOTIFICATION                      NO
+R511                           EXECUTE ANY PROGRAM                      YES
+R511                           ALTER ANY RULE                           YES
+R511                           CREATE ANY RULE                          YES
+R511                           EXPORT FULL DATABASE                     NO
+R511                           UNDER ANY VIEW                           YES
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           CREATE INDEXTYPE                         YES
+R511                           DROP ANY LIBRARY                         NO
+R511                           GRANT ANY PRIVILEGE                      YES
+R511                           ALTER PROFILE                            NO
+R511                           ALTER ANY TRIGGER                        YES
+R511                           AUDIT ANY                                NO
+R511                           DROP ANY ROLE                            YES
+R511                           SELECT ANY SEQUENCE                      NO
+R511                           CREATE SEQUENCE                          YES
+R511                           CREATE ANY CLUSTER                       NO
+R511                           CREATE CLUSTER                           NO
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           SELECT ANY TABLE                         YES
+R511                           DROP USER                                NO
+R511                           MANAGE TABLESPACE                        NO
+R511                           CREATE TABLESPACE                        YES
+R511                           ALTER SESSION                            YES
+R511                           ALTER SYSTEM                             NO
+R511                           ADMINISTER ANY SQL TUNING SET            NO
+R511                           DROP ANY SQL PROFILE                     NO
+R511                           EXECUTE ANY RULE                         YES
+R511                           CREATE RULE                              YES
+R511                           EXECUTE ANY EVALUATION CONTEXT           NO
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           ALTER ANY OUTLINE                        NO
+R511                           EXECUTE ANY INDEXTYPE                    YES
+R511                           UNDER ANY TYPE                           YES
+R511                           DROP ANY MATERIALIZED VIEW               NO
+R511                           ANALYZE ANY                              NO
+R511                           DROP PROFILE                             NO
+R511                           CREATE PROFILE                           NO
+R511                           DROP ANY PROCEDURE                       YES
+R511                           CREATE VIEW                              YES
+R511                           DROP ANY SYNONYM                         NO
+R511                           CREATE ANY INDEX                         YES
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           LOCK ANY TABLE                           YES
+R511                           RESTRICTED SESSION                       NO
+R511                           AUDIT SYSTEM                             NO
+R511                           CREATE CUBE BUILD PROCESS                NO
+R511                           CREATE MEASURE FOLDER                    NO
+R511                           CREATE ANY CUBE                          NO
+R511                           DROP ANY CUBE DIMENSION                  NO
+R511                           EXECUTE ASSEMBLY                         NO
+R511                           MANAGE ANY FILE GROUP                    NO
+R511                           ADMINISTER SQL TUNING SET                NO
+R511                           DROP ANY RULE                            YES
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           EXECUTE ANY RULE SET                     YES
+R511                           CREATE ANY OUTLINE                       NO
+R511                           CREATE ANY MATERIALIZED VIEW             NO
+R511                           CREATE ANY PROCEDURE                     YES
+R511                           CREATE PROCEDURE                         YES
+R511                           DROP PUBLIC DATABASE LINK                NO
+R511                           CREATE PUBLIC DATABASE LINK              NO
+R511                           CREATE DATABASE LINK                     NO
+R511                           DELETE ANY TABLE                         YES
+R511                           CREATE ANY TABLE                         YES
+R511                           SELECT ANY CUBE                          NO
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           DELETE ANY CUBE DIMENSION                NO
+R511                           CREATE ASSEMBLY                          NO
+R511                           DROP ANY EDITION                         NO
+R511                           ALTER ANY SQL PROFILE                    NO
+R511                           SELECT ANY TRANSACTION                   NO
+R511                           CREATE RULE SET                          YES
+R511                           ALTER ANY EVALUATION CONTEXT             NO
+R511                           RESUMABLE                                NO
+R511                           ON COMMIT REFRESH                        NO
+R511                           DEQUEUE ANY QUEUE                        NO
+R511                           ALTER ANY DIMENSION                      NO
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           CREATE ANY DIMENSION                     NO
+R511                           GLOBAL QUERY REWRITE                     NO
+R511                           EXECUTE ANY OPERATOR                     NO
+R511                           DROP ANY TYPE                            YES
+R511                           ALTER ANY TYPE                           YES
+R511                           CREATE ANY TYPE                          YES
+R511                           ALTER ANY PROCEDURE                      YES
+R511                           ALTER ANY SEQUENCE                       YES
+R511                           CREATE ANY SYNONYM                       NO
+R511                           CREATE SYNONYM                           NO
+R511                           DROP ANY INDEX                           YES
+
+USERNAME                       PRIVILEGE                                ADM
+------------------------------ ---------------------------------------- ---
+R511                           DROP ROLLBACK SEGMENT                    NO
+R511                           DROP TABLESPACE                          NO
+
+200 rows selected.

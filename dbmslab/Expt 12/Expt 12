@@ -1,0 +1,299 @@
+Experiment 12
+ 
+1.
+DECLARE
+    a NUMBER;
+    b NUMBER;
+    c NUMBER;
+ 
+    PROCEDURE findMin(x IN NUMBER, y IN NUMBER, z OUT NUMBER) IS
+    BEGIN
+        IF x < y THEN
+            z := x;
+        ELSE
+            z := y;
+        END IF;
+    END;
+ 
+BEGIN
+    a := &a;
+    b := &b;
+    findMin(a, b, c);
+    DBMS_OUTPUT.PUT_LINE('MIN VALUE(' || a || ',' || b || '): ' || c);
+END;
+/
+ 
+2.
+DECLARE
+    binary NUMBER;
+    dec    NUMBER;
+    temp   NUMBER;
+    i NUMBER;
+    y NUMBER;
+   
+ 
+    PROCEDURE convert_bin_dec(x IN NUMBER, dec OUT NUMBER) IS
+    BEGIN
+        i := 0;
+        dec := 0;
+        temp := x;
+        WHILE (temp != 0)
+            LOOP
+                y := MOD(temp, 10);
+                temp := FLOOR(temp / 10);
+                dec:=dec+ y * POWER(2, i);
+                i:=i+1;
+            END LOOP;
+    END;
+ 
+BEGIN
+    binary := &binary;
+    convert_bin_dec(binary, dec);
+    DBMS_OUTPUT.PUT_LINE('DECIMAL EQUIVALENT OF ' || binary || ' is ' || dec);
+END;
+/
+ 
+ 
+ 
+ 
+ 
+3.
+DECLARE
+  A NUMBER;
+  B NUMBER;
+  C NUMBER;
+  D NUMBER;
+ 
+PROCEDURE root_quad(A IN NUMBER,B IN NUMBER,C IN NUMBER) IS
+BEGIN
+   D:= B*B-4*A*C;
+   IF(D=0) THEN
+    DBMS_OUTPUT.put_line('x = ' || (-B/2*A));
+   ELSIF(D>0) THEN
+    DBMS_OUTPUT.put_line('x1 = ' || (-B-SQRT(D))/2*A);
+    DBMS_OUTPUT.put_line('x2 = ' || (-B+SQRT(D))/2*A);
+   ELSE
+    DBMS_OUTPUT.put_line('x1 = (' || (-B/2*A) || ', ' || (SQRT(-D)/2*A) || ')');
+    DBMS_OUTPUT.put_line('x2 = (' || (-B/2*A) || ', ' || (-SQRT(-D)/2*A) || ')');
+   END IF;
+END;
+   
+ 
+BEGIN
+  A:=&A;
+  B:=&B;
+  C:=&C;
+  IF(A=0)THEN
+    DBMS_OUTPUT.put_line('Not a quadratic equation.');
+  ELSE
+    root_quad(A,B,C);
+  END IF;
+END;
+/
+ 
+ 
+4.
+--create table staff and insert values
+DECLARE
+    staff_id INTEGER;
+    n INTEGER;
+    salary INTEGER;
+ 
+PROCEDURE incr_salary(staff_id IN INTEGER,n IN INTEGER) IS
+BEGIN
+  IF(n=1) THEN
+    UPDATE staff SET salary = salary * 1.2 WHERE id = staff_id;
+    SELECT salary INTO salary FROM staff WHERE id = staff_id;
+    DBMS_OUTPUT.put_line('Salary Updated for staff_id '|| staff_id || ' from ' || salary / 1.2 || ' to ' || salary);
+   ELSE
+    DBMS_OUTPUT.put_line('Record Matching Id ' || staff_id || ' Absent');
+   END IF;
+END;
+ 
+BEGIN
+ staff_id := &staff_id;
+ SELECT COUNT(*) INTO n FROM staff WHERE id=staff_id;
+ incr_salary(staff_id,n);
+END;
+/
+ 
+ 
+ 
+5.
+DECLARE
+    staff_id INTEGER;
+    n INTEGER;
+    salary INTEGER;
+ 
+PROCEDURE dlt_staff(staff_id IN INTEGER,n IN INTEGER) IS
+BEGIN
+  IF(n=1) THEN
+    DELETE FROM staff WHERE id=staff_id;
+    DBMS_OUTPUT.put_line('Staff with staff_id '|| staff_id || ' deleted succesfully!');
+   ELSE
+    DBMS_OUTPUT.put_line('Record Matching Id ' || staff_id || ' Absent');
+   END IF;
+END;
+ 
+BEGIN
+ staff_id := &staff_id;
+ SELECT COUNT(*) INTO n FROM staff WHERE id=staff_id;
+ dlt_staff(staff_id,n);
+END;
+/
+ 
+ 
+6.
+DECLARE
+   num NUMBER;
+   factorial NUMBER;  
+   
+FUNCTION fact(x NUMBER)
+RETURN NUMBER IS f NUMBER;
+BEGIN
+   IF x=0 THEN
+      f := 1;
+   ELSE
+      f := x * fact(x-1);
+   END IF;
+RETURN f;
+END;  
+ 
+BEGIN
+   num:= &num;
+   factorial := fact(num);
+   DBMS_OUTPUT.put_line(' Factorial '|| num || ' is ' || factorial);
+END;
+/
+ 
+ 
+7.
+DECLARE
+  num NUMBER;
+  rev NUMBER;
+  temp NUMBER;
+ 
+FUNCTION REVERSE(num NUMBER)
+RETURN NUMBER IS rev NUMBER;
+BEGIN
+  rev:=0;
+  temp:=num;
+  WHILE(temp>0) LOOP
+    rev:=(rev*10) + MOD(temp,10);
+    temp:=FLOOR(temp/10);
+  END LOOP;
+  RETURN rev;
+END;
+ 
+ 
+BEGIN
+ num:=&num;
+ rev:=REVERSE(num);
+ DBMS_OUTPUT.PUT_LINE('------------------');
+ DBMS_OUTPUT.PUT_LINE('Reverse of the number is: ' || rev);
+ IF(rev=num) THEN
+   DBMS_OUTPUT.PUT_LINE('The number ' || num || ' is PALINDROME.');
+ ELSE
+   DBMS_OUTPUT.PUT_LINE('The number ' || num || ' is not PALINDROME.');
+ END IF;
+END;
+/                      
+ 
+ 
+ 
+ 
+8.
+DECLARE
+  n NUMBER;
+  s NUMBER;
+  r NUMBER;
+  len NUMBER;
+  temp NUMBER;
+  res NUMBER;
+ 
+FUNCTION armstrong(n NUMBER)
+RETURN NUMBER IS res NUMBER;
+BEGIN
+   s:=0;
+   temp := n;
+   len := LENGTH(TO_CHAR(temp));
+   WHILE(temp>0) LOOP
+       r := MOD(temp,10);
+       s := s+POWER(r,len);
+       temp := TRUNC(temp/10);
+   END LOOP;
+   IF(n=s) THEN
+      res:=1;
+   ELSE
+      res:=0;
+   END IF;
+   RETURN res;
+END;
+ 
+BEGIN
+  n:=&n;
+  res:=armstrong(n);
+  IF(res=1) THEN
+    DBMS_OUTPUT.put_line('Yes,The number ' ||n|| ' is an Armstrong number');
+  ELSE
+    DBMS_OUTPUT.put_line('No,The number ' ||n|| ' is NOT an Armstrong number');
+  END IF;
+END;
+/
+ 
+ 
+ 
+9.
+--create table test with attributes num and sum
+DECLARE
+  x NUMBER;
+  n NUMBER;
+  i NUMBER;
+  sums NUMBER;
+ 
+FUNCTION findsum(i NUMBER)
+RETURN NUMBER IS SUM NUMBER;
+BEGIN
+  sums:=((i*(i+1))/2);
+  RETURN sums;
+END;
+ 
+BEGIN
+ n:=&n;
+ FOR i IN 1..n LOOP
+   sums:=findsum(i);
+   INSERT INTO test VALUES(i,sums);
+ END LOOP;
+END;
+/
+ 
+ 
+ 
+10.
+--create table test with attributes num,square,cube
+DECLARE
+  n NUMBER;
+  sqr NUMBER;
+  cub NUMBER;
+ 
+FUNCTION SQRT(n NUMBER)
+RETURN NUMBER IS sqr NUMBER;
+BEGIN
+  sqr:=n*n;
+  RETURN sqr;
+END;
+ 
+FUNCTION cube(n NUMBER)
+RETURN NUMBER IS cub NUMBER;
+BEGIN
+  cub:=n*n*n;
+  RETURN cub;
+END;
+ 
+BEGIN
+  n:=&n;
+  sqr:=SQRT(n);
+  cub:=cube(n);
+  INSERT INTO test VALUES(n,sqr,cub);
+END;
+/

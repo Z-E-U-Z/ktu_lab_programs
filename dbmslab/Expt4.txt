@@ -1,0 +1,167 @@
+EXPERIMENT 4
+Amal Nath M
+R5 11
+
+SQL> select name, dept_name from instructor;
+
+NAME                 DEPT_NAME
+-------------------- --------------------
+Srinivasan           Comp. Sci.
+Wu                   Finance
+Mozart               Music
+Einstein             Physics
+El Said              History
+Gold                 Physics
+Katz                 Comp. Sci.
+Califieri            History
+Crick                Biology
+Brandt               Comp. Sci.
+Kim                  Elec. Eng.
+
+11 rows selected.
+
+SQL> select unique semester from teaches;
+
+SEMESTER
+----------
+Spring
+Summer
+Fall
+
+SQL> select name, salary * 1.1 from instructor;
+
+NAME                 SALARY*1.1
+-------------------- ----------
+Srinivasan              82582.5
+Wu                       108900
+Mozart                    50820
+Einstein                 114950
+El Said                   76230
+Gold                     105270
+Katz                      90750
+Califieri                 78771
+Crick                     91476
+Brandt                   111320
+Kim                       96800
+
+11 rows selected.
+
+SQL> select ID, name from instructor where salary > 70000 and dept_name = 'Comp.
+ Sci.';
+
+        ID NAME
+---------- --------------------
+     10101 Srinivasan
+     45565 Katz
+     83821 Brandt
+
+SQL> select i.name, i.dept_name, d.building from instructor i inner join departm
+ent d on i.dept_name = d.dept_name;
+
+NAME                 DEPT_NAME
+-------------------- --------------------
+BUILDING
+--------------------------------------------------
+Srinivasan           Comp. Sci.
+Taylor
+
+Wu                   Finance
+Painter
+
+Mozart               Music
+Packard
+
+
+NAME                 DEPT_NAME
+-------------------- --------------------
+BUILDING
+--------------------------------------------------
+Einstein             Physics
+Watson
+
+El Said              History
+Taylor
+
+Gold                 Physics
+Watson
+
+
+NAME                 DEPT_NAME
+-------------------- --------------------
+BUILDING
+--------------------------------------------------
+Katz                 Comp. Sci.
+Taylor
+
+Califieri            History
+Taylor
+
+Crick                Biology
+Watson
+
+
+NAME                 DEPT_NAME
+-------------------- --------------------
+BUILDING
+--------------------------------------------------
+Brandt               Comp. Sci.
+Taylor
+
+Kim                  Elec. Eng.
+Taylor
+
+
+11 rows selected.
+
+SQL> select i.name, c.course_id from instructor i join teaches c on i.ID = c.ID
+where i.dept_name = 'Comp. Sci.';
+
+NAME                 COURSE_ID
+-------------------- ----------
+Srinivasan           CS-101
+Srinivasan           CS-315
+Srinivasan           CS-347
+Katz                 CS-101
+Katz                 CS-319
+Brandt               CS-190
+Brandt               CS-190
+Brandt               CS-319
+
+8 rows selected.
+
+SQL> select * from course where title like 'Intro%';
+
+COURSE_ID  TITLE                DEPT_NAME               CREDITS
+---------- -------------------- -------------------- ----------
+BIO-101    Intro. to Biology    Biology                       4
+CS-101     Intro. to Comp. Sci. Comp. Sci.                    4
+EE-181     Intro. Dig Systems   Elec. Eng.                    3
+
+SQL> select * from course where title like '%Comp%';
+
+COURSE_ID  TITLE                DEPT_NAME               CREDITS
+---------- -------------------- -------------------- ----------
+CS-101     Intro. to Comp. Sci. Comp. Sci.                    4
+
+SQL> select * from student where name like '___';
+
+        ID NAME                 DEPT_NAME              TOT_CRED DOB
+---------- -------------------- -------------------- ---------- ---------
+     76653 Aoi                  Elec. Eng.                   60 10-MAY-10
+
+SQL> select * from instructor where name like '___%';
+
+        ID NAME                 DEPT_NAME                SALARY
+---------- -------------------- -------------------- ----------
+     10101 Srinivasan           Comp. Sci.                75075
+     15151 Mozart               Music                     46200
+     22222 Einstein             Physics                  104500
+     32343 El Said              History                   69300
+     33456 Gold                 Physics                   95700
+     45565 Katz                 Comp. Sci.                82500
+     58583 Califieri            History                   71610
+     76766 Crick                Biology                   83160
+     83821 Brandt               Comp. Sci.               101200
+     98345 Kim                  Elec. Eng.                88000
+
+10 rows selected.
