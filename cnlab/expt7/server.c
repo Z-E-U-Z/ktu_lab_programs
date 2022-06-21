@@ -26,6 +26,18 @@ void* serverRecv(void* data) {
 		} else if(k == 0) {
 			printf("Client %d exited\n", d.i + 1);
 			d.status[d.i] = 0;
+			
+			for(int j = 0; j < d.n; j++) {
+				if(j != d.i && d.status[j] != 0) {
+					sprintf(str, "Client %d exited", d.i + 1);
+					
+					if(send(d.client_fd[j], str, (strlen(str) + 1) * sizeof(char), 0) < 0) {
+						printf("Send failed!\n");
+						exit(1);
+					}
+				}
+			}
+			
 			break;
 		} else {
 			printf("Received message from client %d: %s\n", d.i + 1, str);
