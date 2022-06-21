@@ -6,8 +6,6 @@
 #include <string.h>
 #include <pthread.h>
 
-#define PORT 5000
-
 typedef struct recvData {
 	int n;
 	int i;
@@ -51,11 +49,14 @@ void* serverRecv(void* data) {
 }
 
 void main() {
-	int server_fd, n;
+	int server_fd, n, PORT;
 	struct sockaddr_in address, cli_addr1, cli_addr2;
 	int addrlen = sizeof(address);
 	
 	printf("Chat Server\n");
+	
+	printf("Enter port: ");
+	scanf("%d", &PORT);
 	
 	printf("Enter no. of clients: ");
 	scanf("%d", &n);
