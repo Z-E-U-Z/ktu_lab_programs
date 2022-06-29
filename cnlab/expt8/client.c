@@ -49,7 +49,7 @@ void main(int argc, char* argv[]) {
 				exit(1);
 			} else {
 				if(!strcmp(buff, "post") || !strcmp(buff, "put") || !strcmp(buff, "patch")) {
-					printf("Enter POST body: ");
+					printf("Enter body: ");
 					scanf("\n");
 					fgets(body, 100, stdin);
 					body[strlen(body) - 1] = '\0';
@@ -74,3 +74,4 @@ void main(int argc, char* argv[]) {
 		close(client_fd);
 	}
 }
+
