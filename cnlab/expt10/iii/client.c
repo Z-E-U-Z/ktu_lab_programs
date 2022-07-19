@@ -120,9 +120,6 @@ void recvAck(data d) {
 				if(index != -1) {
 					printf("ACK %d not received! Frame %d retransmitting.\n", index, index);
 					
-					d.w->start = index;
-					d.w->end = index + d.w->size - 1;
-					
 					sendFrame(d, index);
 				}
 				

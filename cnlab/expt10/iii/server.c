@@ -34,7 +34,7 @@ void main() {
 	struct sockaddr_in address;
 	int addrlen = sizeof(address);
 	
-	printf("Go-Back-N ARQ\nTCP Server\n");
+	printf("Selective Repeat ARQ\nTCP Server\n");
 	
 	if((server_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
 		printf("Socket creation failed!\n");
