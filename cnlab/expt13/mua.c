@@ -174,9 +174,6 @@ void clientRecv(struct sockaddr_in serv_addr, char* mail_id) {
 		else if(k < 0) {
 			printf("Receive failed!\n");
 			break;
-		} else if(k == 0) {
-			printf("Server down!\n");
-			break;
 		} else {
 			printf("\nReceived mail!\n\n%s", str);
 		}
