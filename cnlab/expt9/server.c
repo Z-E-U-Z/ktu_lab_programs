@@ -19,7 +19,7 @@ void main(int argc, char* argv[]) {
 		exit(1);
 	}
 	
-	printf("Time Server\n");
+	printf("Concurrent Time Server\n");
 	
 	if((server_fd = socket(AF_INET, SOCK_DGRAM, 0)) < 0) {
 		printf("Socket creation failed!\n");
@@ -41,7 +41,7 @@ void main(int argc, char* argv[]) {
     		if(recvfrom(server_fd, &code, sizeof(int), 0, (struct sockaddr*) &cli_addr, &len) < 0) {
     			printf("Receive failed!\n");
 			exit(1);
-		} else {
+		} else if (fork() == 0) {
 			printf("Received time request.\n");
 			
 			time_t now = time(0);
@@ -53,6 +53,8 @@ void main(int argc, char* argv[]) {
 			} else {
 				printf("Time reply sent.\n");
 			}
+			
+			return;
     		}
     	}
     	
