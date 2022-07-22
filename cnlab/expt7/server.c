@@ -43,9 +43,10 @@ void* serverRecv(void* data) {
 			printf("Received message from client %d: %s\n", d.i + 1, str);
 		}
 		
+		char str1[120];
+				
 		for(int j = 0; j < d.n; j++) {
 			if(j != d.i && d.status[j] != 0) {
-				char str1[120];
 				sprintf(str1, "Client %d: ", d.i + 1);
 				strcat(str1, str);
 				

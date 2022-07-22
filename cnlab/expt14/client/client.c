@@ -191,7 +191,7 @@ void main() {
 	int client_fd, PORT;
 	struct sockaddr_in serv_addr;
 	
-	printf("TCP Client\n");
+	printf("FTP Client\n");
 	
 	printf("Enter FTP server port: ");
 	scanf("%d", &PORT);
