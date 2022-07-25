@@ -104,6 +104,9 @@ void main(int argc, char* argv[]) {
 	
 	initQueue(&q, size);
 	
+	printf("Enter packet size to send per second: ");
+	scanf("%d", &size);
+	
 	while(1) {
 		printf("Enter number of packets to send: ");
 		scanf("%d", &num);
@@ -114,9 +117,6 @@ void main(int argc, char* argv[]) {
 			printf("Enter packet %d size: ", i + 1);
 			scanf("%d", &packets[i]);
 		}
-		
-		printf("Enter packet size to send per second: ");
-		scanf("%d", &size);
 		
 		for(int i = 0; i < num; i++) {
 			if(q.REMAINING < packets[i]) {
