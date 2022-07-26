@@ -108,7 +108,7 @@ void main(int argc, char* argv[]) {
 	scanf("%d", &size);
 	
 	while(1) {
-		printf("Enter number of packets to send: ");
+		printf("\nEnter number of packets to send: ");
 		scanf("%d", &num);
 		
 		int packets[num];
