@@ -12,9 +12,9 @@ pthread_t ptid, ctid;
 
 void producer() {
 	do {
+		//sleep(1); // For better output view
 		int item = rand() % 100;
 		
-		sleep(1); // For better output view
 		sem_wait(&empty);
 		pthread_mutex_lock(&mutex);
 		
@@ -29,6 +29,7 @@ void producer() {
 
 void consumer() {
 	do {
+		//sleep(2); // For keeping different rates of production and consumption
 		sem_wait(&full);
 		pthread_mutex_lock(&mutex);
 		

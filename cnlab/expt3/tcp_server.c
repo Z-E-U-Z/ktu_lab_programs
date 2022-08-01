@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
-#include <unistd.h>
 
 #define PORT 8000
 

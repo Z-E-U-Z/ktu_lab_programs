@@ -41,7 +41,6 @@ void main() {
 	
 	printf("TCP Server\n");
 
-	
 	if((server_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
 		printf("Socket creation failed!\n");
 		exit(1);
