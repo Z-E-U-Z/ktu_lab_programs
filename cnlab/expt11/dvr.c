@@ -6,6 +6,20 @@ struct node {
 	int from[100];
 };
 
+int path(int src, int i, int from[]) {
+	int temp;
+	
+	while(1) {
+		temp = i;
+		i = from[i];
+		
+		if(temp == i)
+			break;
+	}
+	
+	return temp;
+}
+
 void main() {
 	int nodes;
 	
@@ -49,8 +63,8 @@ void main() {
 	for(int i = 0; i < nodes; i++) {
 		printf("\nFor router %d\n",i + 1);
 		
-		for(int j = 0;j < nodes; j++) {
-			printf("\nShortest distance to router %d is %d via %d", j + 1, rt[i].dist[j], rt[i].from[j] + 1);
+		for(int j = 0; j < nodes; j++) {
+			printf("\nShortest distance to router %d is %d via %d", j + 1, rt[i].dist[j], path(i, j, rt[i].from) + 1);
 		}
         	
         	printf("\n");

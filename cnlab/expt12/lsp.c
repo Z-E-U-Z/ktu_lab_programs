@@ -14,12 +14,29 @@ int minDistance(int V, int dist[], bool sptSet[]) {
 	return min_index;
 }
 
+int path(int src, int i, int from[]) {
+	int temp = from[i];
+	
+	if(temp == src) {
+		return i;
+	}
+	
+	i = from[i];
+	
+	while(i != src) {
+		temp = i;
+		i = from[i];
+	}
+	
+	return temp;
+}
+
 void printSolution(int V, int dist[], int from[], int src) {
 	printf("\nFor router %d\n", src + 1);
-	printf("\nTo router \t Shortest distance \t Previous router\n");
+	printf("\nTo router\tShortest distance\tVia\n");
 	
 	for (int i = 0; i < V; i++)
-		printf("%d \t\t %d \t\t\t %d\n", i + 1, dist[i], from[i] + 1);
+		printf("%d\t\t%d\t\t\t%d\n", i + 1, dist[i], path(src, i, from) + 1);
 }
 
 void dijkstra(int V, int costmat[V][V], int src) {
