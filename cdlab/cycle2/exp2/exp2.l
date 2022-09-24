@@ -1,14 +1,14 @@
 %{
-int nlines,nwords,nchars;
+int nlines, nwords, nchars;
 %}
 
 %%
 
 \n { nchars++; nlines++; }
  
-[^ \n\t]+ {nwords++, nchars = nchars + yyleng;}
+[^ \n\t]+ { nwords++, nchars = nchars + yyleng; }
 
-. {nchars++;}
+. { nchars++; }
 
 %%
 

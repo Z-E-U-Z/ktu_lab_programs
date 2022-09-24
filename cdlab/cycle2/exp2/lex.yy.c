@@ -438,7 +438,7 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "exp2.l"
 #line 2 "exp2.l"
-int nlines,nwords,nchars;
+int nlines, nwords, nchars;
 #line 443 "lex.yy.c"
 #line 444 "lex.yy.c"
 
@@ -726,12 +726,12 @@ YY_RULE_SETUP
 case 2:
 YY_RULE_SETUP
 #line 9 "exp2.l"
-{nwords++, nchars = nchars + yyleng;}
+{ nwords++, nchars = nchars + yyleng; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 11 "exp2.l"
-{nchars++;}
+{ nchars++; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
