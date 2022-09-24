@@ -721,26 +721,24 @@ case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
 #line 7 "exp2.l"
-{
-	nchars++;nlines++; 
-	}
+{ nchars++; nlines++; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 11 "exp2.l"
-{nwords++, nchars=nchars+yyleng;}
+#line 9 "exp2.l"
+{nwords++, nchars = nchars + yyleng;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 12 "exp2.l"
+#line 11 "exp2.l"
 {nchars++;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 14 "exp2.l"
+#line 13 "exp2.l"
 ECHO;
 	YY_BREAK
-#line 744 "lex.yy.c"
+#line 742 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1745,7 +1743,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 14 "exp2.l"
+#line 13 "exp2.l"
 
 
 int yywrap(void)  
