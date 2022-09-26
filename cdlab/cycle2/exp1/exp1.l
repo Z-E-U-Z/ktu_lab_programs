@@ -1,13 +1,9 @@
- //Implementation of Lexical Analyzer using Lex tool
- 
-%{
-int COMMENT=0;
-%}
 identifier [a-zA-Z][a-zA-Z0-9]*
 
 %%
 
 #.* {printf("\n%s is a preprocessor directive",yytext);}
+
 int |
 float |
 char |
@@ -24,22 +20,33 @@ void |
 switch |
 return |
 else |
-goto {printf("\n%s is a KEYWORD",yytext);}
-"/*" {COMMENT=1;}{printf("\n%s is a COMMENT",yytext);}
-{identifier}\( {if(!COMMENT)printf("\nFUNCTION\n%s",yytext);}
-\{  {if(!COMMENT)printf("\nBLOCK BEGINS");}
-\}  {if(!COMMENT)printf("\nBLOCK ENDS");}
-{identifier}(\[[0-9]*\])? {if(!COMMENT) printf("\n%s is an IDENTIFIER",yytext);}
-\".*\" {if(!COMMENT)printf("\n%s is a STRING",yytext);}
-[0-9]+ {if(!COMMENT) printf("\n%s is a NUMBER",yytext);}
-\)(\:)? {if(!COMMENT)printf("\n");ECHO;printf("\n");}
+goto {printf("\n%s is a KEYWORD", yytext);}
+
+\/\/.* {printf("\n%s is a COMMENT", yytext);}
+
+{identifier}\( {printf("\nFUNCTION\n%s", yytext);}
+
+\{ {printf("\n"); ECHO; printf("\nBLOCK BEGINS");}
+
+\} {printf("\nBLOCK ENDS\n"); ECHO;}
+
+{identifier}(\[[0-9]*\])? {printf("\n%s is an IDENTIFIER", yytext);}
+
+\".*\" {printf("\n%s is a STRING", yytext);}
+
+[0-9]+ {printf("\n%s is a NUMBER", yytext);}
+
+\)(\:)? {printf("\n"); ECHO; printf("\n");}
+
 \( ECHO;
-= {if(!COMMENT)printf("\n%s is an ASSIGNMENT OPERATOR",yytext);}
+
+= {printf("\n%s is an ASSIGNMENT OPERATOR", yytext);}
+
 \<= |
 \>= |
 \< |
 == |
-\> {if(!COMMENT) printf("\n%s is a RELATIONAL OPERATOR",yytext);}
+\> {printf("\n%s is a RELATIONAL OPERATOR", yytext);}
 
 %%
 

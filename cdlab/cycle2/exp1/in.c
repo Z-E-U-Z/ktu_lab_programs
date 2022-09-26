@@ -1,5 +1,6 @@
+//input program for lexical analyser
+
 #include<stdio.h>
-#include<conio.h>
 
 void main() {
 	int a,b,c;
