@@ -2,6 +2,11 @@
 
 #include<stdio.h>
 
+/* This
+is
+comment
+*/
+
 void main() {
 	int a,b,c;
 	a = 1;

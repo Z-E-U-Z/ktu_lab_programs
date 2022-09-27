@@ -1,6 +1,16 @@
+%{
+#include <string.h>
+int comment = 0;
+%}
+
 identifier [a-zA-Z][a-zA-Z0-9]*
 
 %%
+
+\/\/.* {printf("\n%s is a COMMENT", yytext);}
+
+\/\* {comment = 1; printf("\n"); ECHO; printf("\nComment begins");}
+\*\/ {comment = 0; printf("\nComment ends\n"); ECHO;}
 
 #.* {printf("\n%s is a preprocessor directive",yytext);}
 
@@ -20,34 +30,46 @@ void |
 switch |
 return |
 else |
-goto {printf("\n%s is a KEYWORD", yytext);}
+goto {if(!comment) printf("\n%s is a KEYWORD", yytext);}
 
-\/\/.* {printf("\n%s is a COMMENT", yytext);}
+{identifier}\( {yytext[strlen(yytext) - 1] = '\0'; if(!comment) printf("\n%s is a FUNCTION\n\n( is an OPENING PARANTHESIS", yytext);}
 
-{identifier}\( {printf("\nFUNCTION\n%s", yytext);}
+\{ {if(!comment) {printf("\n\n"); ECHO; printf("\nBLOCK BEGINS");}}
 
-\{ {printf("\n"); ECHO; printf("\nBLOCK BEGINS");}
+\} {if(!comment) {printf("\nBLOCK ENDS\n"); ECHO;}}
 
-\} {printf("\nBLOCK ENDS\n"); ECHO;}
+{identifier}(\[[0-9]*\])? {if(!comment) printf("\n%s is an IDENTIFIER", yytext);}
 
-{identifier}(\[[0-9]*\])? {printf("\n%s is an IDENTIFIER", yytext);}
+\".*\" {if(!comment) printf("\n%s is a STRING", yytext);}
 
-\".*\" {printf("\n%s is a STRING", yytext);}
+[0-9]+ {if(!comment) printf("\n%s is a NUMBER", yytext);}
 
-[0-9]+ {printf("\n%s is a NUMBER", yytext);}
+\( {if(!comment) printf("\n%s is an OPENING PARANTHESIS", yytext);}
 
-\)(\:)? {printf("\n"); ECHO; printf("\n");}
+\) {if(!comment) printf("\n%s is a CLOSING PARANTHESIS", yytext);}
 
-\( ECHO;
+\)(\:)? {if(!comment) printf("\n"); if(!comment) ECHO; if(!comment) printf("\n");}
 
-= {printf("\n%s is an ASSIGNMENT OPERATOR", yytext);}
+= {if(!comment) printf("\n%s is an ASSIGNMENT OPERATOR", yytext);}
 
 \<= |
 \>= |
 \< |
 == |
-\> {printf("\n%s is a RELATIONAL OPERATOR", yytext);}
+\> {if(!comment) printf("\n%s is a RELATIONAL OPERATOR", yytext);}
 
+, {if(!comment) printf("\n%s is a SEPARATOR", yytext);}
+
+; {if(!comment) printf("\n%s is a DELIMITER", yytext);}
+
+[+-/*%] {if(!comment) printf("\n%s is an ARITHMETIC OPERATOR", yytext);}
+
+[|&\^] {if(!comment) printf("\n%s is a BITWISE OPERATOR", yytext);}
+
+! |
+&& |
+\|\| {if(!comment) printf("\n%s is a LOGICAL OPERATOR", yytext);}
+ 
 %%
 
 int main(int argc, char **argv) {
