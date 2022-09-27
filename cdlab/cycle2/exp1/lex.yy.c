@@ -842,17 +842,17 @@ YY_RULE_SETUP
 case 2:
 YY_RULE_SETUP
 #line 12 "exp1.l"
-{comment = 1; printf("\n"); ECHO; printf("\nComment begins");}
+{comment = 1; printf("\n"); ECHO; printf("\nCOMMENT BEGINS");}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 13 "exp1.l"
-{comment = 0; printf("\nComment ends\n"); ECHO;}
+{comment = 0; printf("\nCOMMENT ENDS\n"); ECHO;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
 #line 15 "exp1.l"
-{printf("\n%s is a preprocessor directive",yytext);}
+{printf("\n%s is a PREPROCESSOR DIRECTIVE",yytext);}
 	YY_BREAK
 case 5:
 #line 18 "exp1.l"

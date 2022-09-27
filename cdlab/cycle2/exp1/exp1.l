@@ -9,10 +9,10 @@ identifier [a-zA-Z][a-zA-Z0-9]*
 
 \/\/.* {printf("\n%s is a COMMENT", yytext);}
 
-\/\* {comment = 1; printf("\n"); ECHO; printf("\nComment begins");}
-\*\/ {comment = 0; printf("\nComment ends\n"); ECHO;}
+\/\* {comment = 1; printf("\n"); ECHO; printf("\nCOMMENT BEGINS");}
+\*\/ {comment = 0; printf("\nCOMMENT ENDS\n"); ECHO;}
 
-#.* {printf("\n%s is a preprocessor directive",yytext);}
+#.* {printf("\n%s is a PREPROCESSOR DIRECTIVE",yytext);}
 
 int |
 float |
