@@ -20,7 +20,7 @@ void main() {
 
 int 8a5; /* Hi */
 /* Hi
-*/
+aa*/amal
 hello
 /*
 Hi

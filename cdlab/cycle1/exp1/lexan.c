@@ -1,3 +1,5 @@
+// Lexical analyser in C
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -191,21 +193,21 @@ void parse(char str[]) {
 			
 			end++;
 			start = end;
-			continue;
 		} else if(str[start] == '*' && str[start + 1] == '/') {
 			isComment = false;
 			printf("%s is a multiline comment\n", substr(str, 0, start + 1));
 			
-			end += 2;
-			start = end;
-			continue;
+			start += 2;
+			end = start;
 		}
-		
-		if(isComment) { printf("%s is a multiline comment\n", str); return; }
 		
 		if(!isDelimiter(str[end])) {
 			end++;
+			
+			if(end == len)
+				goto L1;
 		} else {
+		L1:
 			if(start == end) {
 				if(isOperator(str[end]) && end + 1 < len && isOperator(str[end + 1])) {
 					end++;
@@ -216,7 +218,9 @@ void parse(char str[]) {
 			
 			lexeme = substr(str, start, end);
 			
-			if(operatorCheck(lexeme)) {
+			if(isComment) {
+				
+			} else if(operatorCheck(lexeme)) {
 				
 			} else if(separatorCheck(lexeme)) {
 				
@@ -248,6 +252,10 @@ void parse(char str[]) {
 			start = end;
 		}
 	}
+		
+	if(isComment) {
+		printf("%s is a multiline comment\n", str);
+	}
 }
 
 void main() {
@@ -264,3 +272,8 @@ void main() {
 		parse(str);
 	}
 }
+
+/* Lexical
+analyser
+is
+done */
