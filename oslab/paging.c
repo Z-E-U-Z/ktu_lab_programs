@@ -245,7 +245,7 @@ void lfu(int m, int n, int pages[]) {
 void main() {
 	int m, n, opt;
 	
-	printf("Enter the page table capacity: ");
+	printf("Enter the frame capacity: ");
 	scanf("%d", &m);
 	
 	printf("Enter the no of page requests: ");
