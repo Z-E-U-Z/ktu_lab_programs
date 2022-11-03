@@ -107,7 +107,7 @@ bool charCheck(char* str) {
 
 bool strCheck(char* str) {
 	if(str[0] == '\"' && str[strlen(str) - 1] == '\"') {
-		printf("%s is a string\n", str);
+		printf("%s is a string literal\n", str);
 		return true;
 	}
 	
@@ -277,3 +277,4 @@ void main() {
 analyser
 is
 done */
+

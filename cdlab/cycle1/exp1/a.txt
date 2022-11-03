@@ -5,7 +5,7 @@
 
 void main() {
 	char filename[20];
-	printf("Enter input filename: ");
+	printf("%d is a", &a);
 	scanf("%s", filename);
 	
 	FILE *fp = fopen(filename, "r");
@@ -25,3 +25,4 @@ hello
 /*
 Hi
 */
+
