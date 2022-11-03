@@ -31,8 +31,15 @@ int add_state(char state[3], int i, int k) {
 	return k;
 }
 
-int searchDup(trans table*, int len) {
+int isDup(trans table[], int len, char state1[], char input[], char state2[]) {
+	int flag = 0;
 	
+	for(int i = 0; i < len; i++) {
+		if(!strcmp(table[i].state1, state1) && !strcmp(table[i].input, input) && !strcmp(table[i].state2, state2))
+			flag = 1;
+	}
+	
+	return flag;
 }
 
 void main() {
@@ -91,7 +98,7 @@ void main() {
 		}
 	}
 	
-	// Calculating e-closure
+	// Finding e-closure
 	printf("\nE-closure\n");
 	for(int i = 0; i < n; i++) {
 		printf("%s: ", states[i]);
@@ -105,7 +112,7 @@ void main() {
 	char start1[10][3];
 	char final1[10][3];
 	
-	// Calculating new start states
+	// Finding new start states
 	for(int i = 0; i < n; i++) {
 		if(!strcmp(states[i], start)) {
 			for(int j = 0; j < cl[i].len; j++) {
@@ -122,7 +129,7 @@ void main() {
 		printf("%s\n", start1[i]);
 	}
 	
-	// Calculating new final states
+	// Finding new final states
 	for(int k = 0; k < f; k++) {
 		for(int i = 0; i < n; i++) {
 			for(int j = 0; j < cl[i].len; j++) {
@@ -139,7 +146,7 @@ void main() {
 		printf("%s\n", final1[i]);
 	}
 	
-	// Modifying the transition table
+	// Finding the transition table
 	for(int i = 0; i < n; i++) {
 		for(int j = 0; j < cl[i].len; j++) {
 			for(int k = 0; k < m; k++) {
@@ -147,13 +154,12 @@ void main() {
 					for(int p = 0; p < n; p++) {
 						if(!strcmp(states[p], table[k].state2)) {
 							for(int q = 0; q < cl[p].len; q++) {
-								
-								
-								
-								strcpy(table1[m1].state1, states[i]);
-								strcpy(table1[m1].input, table[k].input);
-								strcpy(table1[m1].state2, cl[p].states[q]);
-								m1++;
+								if(!isDup(table1, m1, states[i], table[k].input, cl[p].states[q])) {
+									strcpy(table1[m1].state1, states[i]);
+									strcpy(table1[m1].input, table[k].input);
+									strcpy(table1[m1].state2, cl[p].states[q]);
+									m1++;
+								}
 							}
 							
 							break;
