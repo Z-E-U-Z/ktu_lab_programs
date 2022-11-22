@@ -55,6 +55,17 @@ int cmpState(state state1, state state2) {
 		return 0;
 }
 
+int containsState(state st, char state[]) {
+	int flag = 0;
+	
+	for(int i = 0; i < st.len; i++) {
+		if(!strcmp(st.states[i], state))
+			flag = 1;
+	}
+	
+	return flag;
+}
+
 void insertTrans(trans1* table, state* state1, char input, state* state2, int i) {
 	table[i].state1.len = state1->len;
 	table[i].state1.flag = state1->flag;
@@ -81,7 +92,7 @@ void main() {
 	scanf("%d", &n);
 	
 	printf("Enter the states:\n");
-	for(int i = 0; i < n; i++){
+	for(int i = 0; i < n; i++) {
 		scanf("%s", states[i]);
 	}
 	
@@ -137,7 +148,7 @@ void main() {
 			
 			for(int j = 0; j < temp.len; j++) {
 				for(int k = 0; k < m; k++) {
-					if(!strcmp(temp.states[j], table[k].state1) && alpha[i] == table[k].input) {
+					if(!strcmp(temp.states[j], table[k].state1) && alpha[i] == table[k].input && !containsState(temp1, table[k].state2)) {
 						strcpy(temp1.states[temp1.len++], table[k].state2);
 					}
 				}

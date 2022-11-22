@@ -1,3 +1,5 @@
+// Lexical analyser in C
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -7,7 +9,7 @@ bool isFunction = false;
 bool isComment = false;
 
 bool isDelimiter(char ch) {
-	if (ch == ' ' || ch == '\t' || ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '!' || ch == '|' || ch == '&' || ch == ',' || ch == ';' || ch == '>' || ch == '<' || ch == '=' || ch == '(' || ch == ')' || ch == '[' || ch == ']' || ch == '{' || ch == '}' || ch == '\'' || ch == '\"' || ch == ':') return true;
+	if (ch == ' ' || ch == '\t' || ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '!' || ch == '|' || ch == '&' || ch == ',' || ch == ';' || ch == '>' || ch == '<' || ch == '=' || ch == '(' || ch == ')' || ch == '[' || ch == ']' || ch == '{' || ch == '}' || ch == '\'' || ch == '\"') return true;
 
 	return false;
 }
@@ -20,12 +22,12 @@ bool isOperator(char ch) {
 }
 
 bool separatorCheck(char* str) {
-	if(!strcmp(str, "(")) printf("( : PARANTHESIS BEGIN\n");
-	else if(!strcmp(str, ")")) { isFunction = false; printf(") : PARANTHESIS END\n"); }
-	else if(!strcmp(str, "{")) printf("{ : BLOCK BEGINS\n");
-	else if(!strcmp(str, "}")) printf("} : BLOCK ENDS\n");
-	else if(!strcmp(str, ",")) printf(", : SEPARATOR\n");
-	else if(!strcmp(str, ";")) printf("; : DELIMITER\n");
+	if(!strcmp(str, "(")) printf("(\n");
+	else if(!strcmp(str, ")")) { isFunction = false; printf(")\n"); }
+	else if(!strcmp(str, "{")) printf("Block begins\n{\n");
+	else if(!strcmp(str, "}")) printf("Block ends\n}\n");
+	else if(!strcmp(str, ",")) printf(", is a separator\n");
+	else if(!strcmp(str, ";")) printf("; is a delimiter\n");
 	else return false;
 	
 	return true;
@@ -33,23 +35,21 @@ bool separatorCheck(char* str) {
 
 bool operatorCheck(char* str) {
 	if(!strcmp(str, "+") || !strcmp(str, "-") || !strcmp(str, "*") || !strcmp(str, "/"))
-		printf("%s : ARITHMETIC OPERATOR\n", str);
+		printf("%s is an arithmetic operator\n", str);
 	else if(!strcmp(str, "="))
-		printf("%s : ASSIGNMENT OPERATOR\n", str);
+		printf("%s is an assignment operator\n", str);
 	else if(!strcmp(str, "<") || !strcmp(str, ">") || !strcmp(str, "<=") || !strcmp(str, ">=") || !strcmp(str, "==") || !strcmp(str, "!="))
-		printf("%s : RELATIONAL OPERATOR\n", str);
+		printf("%s is a relational operator\n", str);
 	else if(!strcmp(str, "!") || !strcmp(str, "||") || !strcmp(str, "&&"))
-		printf("%s : LOGICAL OPERATOR\n", str);
+		printf("%s is a logical operator\n", str);
 	else if(!strcmp(str, "|") || !strcmp(str, "&"))
-		printf("%s : BITWISE OPERATOR\n", str);
+		printf("%s is a bitwise operator\n", str);
 	else if(!strcmp(str, "++") || !strcmp(str, "--") || !strcmp(str, "+=") || !strcmp(str, "-=") || !strcmp(str, "*=") || !strcmp(str, "/=") || !strcmp(str, "|=") || !strcmp(str, "&="))
-		printf("%s : COMPOUND OPERATOR\n", str);
+		printf("%s is a compound operator\n", str);
 	else if(!strcmp(str, "["))
-		printf("[ : ARRAY INDEX OPERATOR BEGIN\n");
+		printf("[ is array index operator begin\n");
 	else if(!strcmp(str, "]"))
-		printf("] : ARRAY INDEX OPERATOR END\n");
-	else if(!strcmp(str, ":"))
-		printf(": : LABEL DEFINITION OPERATOR\n");
+		printf("] is array index operator end\n");
 	else return false;
 	
 	return true;
@@ -57,7 +57,7 @@ bool operatorCheck(char* str) {
 
 bool keywordCheck(char* str) {
 	if (!strcmp(str, "if") || !strcmp(str, "else") || !strcmp(str, "while") || !strcmp(str, "for") || !strcmp(str, "do") || !strcmp(str, "break") || !strcmp(str, "continue") || !strcmp(str, "int") || !strcmp(str, "double") || !strcmp(str, "float") || !strcmp(str, "return") || !strcmp(str, "char") || !strcmp(str, "case") || !strcmp(str, "char") || !strcmp(str, "bool") || !strcmp(str, "true") || !strcmp(str, "false") || !strcmp(str, "sizeof") || !strcmp(str, "long") || !strcmp(str, "short") || !strcmp(str, "typedef") || !strcmp(str, "switch") || !strcmp(str, "unsigned") || !strcmp(str, "void") || !strcmp(str, "static") || !strcmp(str, "struct") || !strcmp(str, "goto")) {
-		printf("%s : KEYWORD\n", str);
+		printf("%s is a keyword\n", str);
 		return true;
 	}
 	
@@ -74,7 +74,7 @@ bool integerCheck(char* str) {
 			return false;
     	}
 	
-	printf("%s : INTEGER\n", str);
+	printf("%s is an integer\n", str);
 	return true;
 }
 
@@ -91,14 +91,14 @@ bool realNumberCheck(char* str) {
 			hasDecimal = true;
 	}
 	
-	if(hasDecimal) printf("%s : REAL NUMBER\n", str);
+	if(hasDecimal) printf("%s is a real number\n", str);
 	
 	return hasDecimal;
 }
 
 bool charCheck(char* str) {
 	if(str[0] == '\'' && str[strlen(str) - 1] == '\'') {
-		printf("%s : CHARACTER\n", str);
+		printf("%s is a character\n", str);
 		return true;
 	}
 	
@@ -107,21 +107,16 @@ bool charCheck(char* str) {
 
 bool strCheck(char* str) {
 	if(str[0] == '\"' && str[strlen(str) - 1] == '\"') {
-		printf("%s : STRING LITERAL\n", str);
+		printf("%s is a string literal\n", str);
 		return true;
 	}
 	
 	return false;
 }
 
-bool identifierCheck(char* str) {
-	if((str[0] < 'a' || str[0] > 'z') && (str[0] < 'A' || str[0] > 'Z') && (str[0] != '_') && (str[0] != '*'))
+bool identifierCheck(char* str) { 
+	if(str[0] == '0' || str[0] == '1' || str[0] == '2' || str[0] == '3' || str[0] == '4' || str[0] == '5' || str[0] == '6' || str[0] == '7' || str[0] == '8' || str[0] == '9' || isDelimiter(str[0]) == true) 
 		return false;
-	
-	for(int i = 1; i < strlen(str); i++) {
-		if((str[i] < 'a' || str[i] > 'z') && (str[i] < 'A' || str[i] > 'Z') && (str[i] < '0' || str[i] > '9') && (str[i] != '_'))
-			return false;
-	}
 	
 	return true;
 }
@@ -146,7 +141,7 @@ bool preprocessorCheck(char str[]) {
 	while(str[i] == ' ') i++;
 
 	if(str[i] == '#') {
-		printf("%s : PREPROCESSOR DIRECTIVE\n", str);
+		printf("%s is a preprocessor directive\n", str);
 		return true;
 	}
 	
@@ -173,7 +168,7 @@ void parse(char str[]) {
 			
 			end++;
 		} else if(str[start] == '/' && str[start + 1] == '/') {
-			printf("%s : SINGLE LINE COMMENT\n", substr(str, start, strlen(str) - 1));
+			printf("%s is a single line comment\n", substr(str, start, strlen(str) - 1));
 			
 			end++;
 			start = end;
@@ -186,7 +181,7 @@ void parse(char str[]) {
 			while((end + 1) < len) {
 				if(str[end] == '*' && str[end + 1] == '/') {
 					end++;
-					printf("%s : MULTILINE COMMENT\n", substr(str, start, end));
+					printf("%s is a multiline comment\n", substr(str, start, end));
 					isComment = false;
 					break;
 				}
@@ -194,13 +189,13 @@ void parse(char str[]) {
 					end++;
 			}
 			
-			if(isComment) { printf("%s : MULTILINE COMMENT\n", substr(str, start, len - 1)); return; }
+			if(isComment) { printf("%s is a multiline comment\n", substr(str, start, len - 1)); return; }
 			
 			end++;
 			start = end;
 		} else if(str[start] == '*' && str[start + 1] == '/') {
 			isComment = false;
-			printf("%s : MULTILINE COMMENT\n", substr(str, 0, start + 1));
+			printf("%s is a multiline comment\n", substr(str, 0, start + 1));
 			
 			start += 2;
 			end = start;
@@ -212,8 +207,7 @@ void parse(char str[]) {
 			if(end == len)
 				goto L1;
 		} else {
-			L1:
-			
+		L1:
 			if(start == end) {
 				if(isOperator(str[end]) && end + 1 < len && isOperator(str[end + 1])) {
 					end++;
@@ -242,16 +236,16 @@ void parse(char str[]) {
 				
 			} else if(identifierCheck(lexeme)) {
 				if(end + 1 < len && str[end + 1] == '(') {
-					printf("%s : FUNCTION\n", lexeme);
+					printf("%s is a function\n", lexeme);
 					isFunction = true;
 				}
 				else if(isFunction) {
-					printf("%s : ARGUMENT\n", lexeme);
+					printf("%s is an argument\n", lexeme);
 				} else {
-					printf("%s : IDENTIFIER\n", lexeme);
+					printf("%s is an identifier\n", lexeme);
 				}
 			} else if(strcmp(lexeme, " ") && strcmp(lexeme, "\t") && strcmp(lexeme, "\n")) {
-				printf("%s : INVALID LEXEME\n", lexeme);
+				printf("%s is an invalid token\n", lexeme);
 			}
 			
 			end++;
@@ -260,7 +254,7 @@ void parse(char str[]) {
 	}
 		
 	if(isComment) {
-		printf("%s : MUTLILINE COMMENT\n", str);
+		printf("%s is a multiline comment\n", str);
 	}
 }
 
@@ -283,3 +277,4 @@ void main() {
 analyser
 is
 done */
+

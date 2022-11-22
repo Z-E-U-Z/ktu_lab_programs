@@ -175,3 +175,4 @@ void main() {
 		printf("%s %s %s\n", table1[i].state1, table1[i].input, table1[i].state2);
 	}
 }
+
