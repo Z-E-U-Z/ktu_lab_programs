@@ -246,12 +246,6 @@ void main() {
 		}
 	} while(flag);
 	
-	for(int i = 0; i < n; i++)
-		printf("%s\n", states[i]);
-	
-	for(int i = 0; i < m; i++)
-		printf("%s %c %s\n", table[i].state1, table[i].input, table[i].state2);
-	
 	// Table filling
 	int mTbl[n][n];
 	
