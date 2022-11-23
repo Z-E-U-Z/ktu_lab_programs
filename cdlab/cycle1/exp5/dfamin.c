@@ -31,6 +31,14 @@ int n1, f1, m1, l;
 state states1[10], start1, final1[10];
 trans1 table1[50];
 
+void removeState(int k) {
+	for(int i = k; i < n - 1; i++) {
+		strcpy(states[i], states[i + 1]);
+	}
+	
+	n--;
+}
+
 int isFinal(char state[]) {
 	int flag = 0;
 
@@ -203,6 +211,24 @@ void main() {
 	// Minimising using Myhill-Nerode Theorem
 	printf("\nMinimised DFA\n");
 	
+	// Eliminating unreachable states
+	for(int i = 0; i < n; i++) {
+		if(!strcmp(states[i], start))
+			continue;
+		
+		int flag = 0;
+		
+		for(int j = 0; j < m; j++) {
+			if(strcmp(table[j].state1, states[i]) && !strcmp(table[j].state2, states[i]))
+				flag = 1;
+		}
+		
+		if(!flag) {
+			removeState(i);
+		}
+	}
+	
+	// Table filling
 	int mTbl[n][n];
 	
 	for(int i = 0; i < n; i++) {
@@ -245,13 +271,6 @@ void main() {
 			}
 		}
 	} while(flag);
-	
-	for(int i = 0; i < n; i++) {
-		for(int j = 0; j < n; j++) {
-			printf("%d ", mTbl[i][j]);
-		}
-		printf("\n");
-	}
 	
 	// Combining states
 	n1 = 0;
