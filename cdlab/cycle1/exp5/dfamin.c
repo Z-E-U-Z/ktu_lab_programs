@@ -39,6 +39,16 @@ void removeState(int k) {
 	n--;
 }
 
+void removeTrans(int k) {
+	for(int i = 2 * k; i < m - 2; i++) {
+		strcpy(table[i].state1, table[i + 2].state1);
+		table[i].input = table[i + 2].input;
+		strcpy(table[i].state2, table[i + 2].state2);
+	}
+	
+	m -= 2;
+}
+
 int isFinal(char state[]) {
 	int flag = 0;
 
@@ -211,22 +221,36 @@ void main() {
 	// Minimising using Myhill-Nerode Theorem
 	printf("\nMinimised DFA\n");
 	
+	int flag;
+	
 	// Eliminating unreachable states
-	for(int i = 0; i < n; i++) {
-		if(!strcmp(states[i], start))
-			continue;
+	do {
+		flag = 0;
 		
-		int flag = 0;
-		
-		for(int j = 0; j < m; j++) {
-			if(strcmp(table[j].state1, states[i]) && !strcmp(table[j].state2, states[i]))
+		for(int i = 0; i < n; i++) {
+			if(!strcmp(states[i], start))
+				continue;
+			
+			int flag1 = 0;
+			
+			for(int j = 0; j < m; j++) {
+				if(strcmp(table[j].state1, states[i]) && !strcmp(table[j].state2, states[i]))
+					flag1 = 1;
+			}
+			
+			if(!flag1) {
 				flag = 1;
+				removeState(i);
+				removeTrans(i);
+			}
 		}
-		
-		if(!flag) {
-			removeState(i);
-		}
-	}
+	} while(flag);
+	
+	for(int i = 0; i < n; i++)
+		printf("%s\n", states[i]);
+	
+	for(int i = 0; i < m; i++)
+		printf("%s %c %s\n", table[i].state1, table[i].input, table[i].state2);
 	
 	// Table filling
 	int mTbl[n][n];
@@ -247,7 +271,7 @@ void main() {
 		}
 	}
 	
-	int s1, s2, flag;
+	int s1, s2;
 	
 	// Marking the states by checking if their transitions are marked
 	do {
