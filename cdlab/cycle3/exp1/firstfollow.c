@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct prod {
 	char lhs[10];
@@ -16,8 +17,9 @@ typedef struct followStruct {
 	int count;
 } followStruct;
 
-int n;
+int n, nTemp;
 prod grammar[30];
+prod grammarTemp[30];
 char temps[] = "PQRUVWXYZ";
 int tempIndex = 0;
 
@@ -43,14 +45,22 @@ firstStruct* first(char c) {
 						break;
 					}
 					
+					if(grammar[i].rhs[j] < 'A' || grammar[i].rhs[j] >'Z') {
+						f->arr[f->count++] = grammar[i].rhs[j];
+						break;
+					}
+					
 					firstStruct* f1 = first(grammar[i].rhs[j]);
 					
 					if(contains(f1, 'e')) {
 						for(int k = 0; k < f1->count; k++) {
+							if(f1->arr[k] == 'e')
+								continue;
+							
 							flag = 0;
 							
 							for(int l = 0; l < f->count; l++) {
-								if(f1->arr[k] != 'e' && f->arr[l] == f1->arr[k]) {
+								if(f->arr[l] == f1->arr[k]) {
 									flag = 1;
 								}
 							}
@@ -59,9 +69,13 @@ firstStruct* first(char c) {
 								f->arr[f->count++] = f1->arr[k];
 						}
 						
+						if(grammar[i].rhs[j + 1] == '\0') {
+							f->arr[f->count++] = 'e';
+							break;
+						}
+						
 						continue;
-					}
-					else {
+					} else {
 						for(int k = 0; k < f1->count; k++) {
 							flag = 0;
 							
@@ -95,10 +109,123 @@ firstStruct* first(char c) {
 	return f;
 }
 
-void follow(char c) {
-	for(int i = 0; i < n; i++) {
-		//if()
+followStruct* follow(char c) {
+	followStruct* f = (followStruct*) malloc(sizeof(followStruct));
+	int flag;
+	
+	if(grammarTemp[0].lhs[0] == c) {
+		f->arr[f->count++] = '$';
 	}
+	
+	for(int i = 0; i < nTemp; i++) {
+		for(int j = 0; ; j++) {
+			flag = 0;
+			
+			if(grammarTemp[i].rhs[j] == '\0')
+				break;
+			
+			if(grammarTemp[i].rhs[j] == c) {
+				if(grammarTemp[i].rhs[j + 1] == '\0') {
+					if(grammarTemp[i].lhs[0] == c)
+						break;
+					
+					followStruct* f2 = follow(grammarTemp[i].lhs[0]);
+					
+					for(int k = 0; k < f2->count; k++) {
+						flag = 0;
+						
+						for(int l = 0; l < f->count; l++) {
+							if(f->arr[l] == f2->arr[k]) {
+								flag = 1;
+							}
+						}
+						
+						if(!flag) {
+							f->arr[f->count++] = f2->arr[k];
+						}
+					}
+				} else if(grammarTemp[i].rhs[j + 1] >= 'A' && grammarTemp[i].rhs[j + 1] <= 'Z') {
+					firstStruct* f1 = first(grammarTemp[i].rhs[j + 1]);
+					
+					int m = 2;
+					
+					while(grammarTemp[i].rhs[j + m] != '\0' && contains(f1, 'e')) {
+						for(int k = 0; k < f1->count; k++) {
+							if(f1->arr[k] == 'e')
+								continue;
+							
+							flag = 0;
+							
+							for(int l = 0; l < f->count; l++) {
+								if(f->arr[l] == f1->arr[k]) {
+									flag = 1;
+								}
+							}
+							
+							if(!flag) {
+								f->arr[f->count++] = f1->arr[k];
+							}
+						}
+						
+						flag = 0;
+						
+						if(grammarTemp[i].rhs[j + m] >= 'A' && grammarTemp[i].rhs[j + m] <= 'Z') {
+							f1 = first(grammarTemp[i].rhs[j + m]);
+							m++;
+						} else {
+							f->arr[f->count++] = grammarTemp[i].rhs[j + m];
+							flag = 1;
+							break;
+						}
+					}
+					
+					if(!flag) {
+						for(int k = 0; k < f1->count; k++) {
+							if(f1->arr[k] == 'e')
+								continue;
+							
+							flag = 0;
+							
+							for(int l = 0; l < f->count; l++) {
+								if(f->arr[l] == f1->arr[k]) {
+									flag = 1;
+								}
+							}
+							
+							if(!flag) {
+								f->arr[f->count++] = f1->arr[k];
+							}
+						}
+						
+						if(grammarTemp[i].rhs[j + m] == '\0') {
+							if(grammarTemp[i].lhs[0] == c)
+								break;
+							
+							followStruct* f2 = follow(grammarTemp[i].lhs[0]);
+							
+							for(int k = 0; k < f2->count; k++) {
+								flag = 0;
+								
+								for(int l = 0; l < f->count; l++) {
+									if(f->arr[l] == f2->arr[k]) {
+										flag = 1;
+									}
+								}
+								
+								if(!flag) {
+									f->arr[f->count++] = f2->arr[k];
+								}
+							}
+						}
+					}
+				} else {
+					f->arr[f->count++] = grammarTemp[i].rhs[j + 1];
+				}
+			}
+		}
+	}
+	
+	return f;
 }
 
 void main() {
@@ -108,9 +235,12 @@ void main() {
 	
 	printf("Enter the number of productions: ");
 	scanf("%d", &n);
+	nTemp = n;
 	
 	for(int i = 0; i < n; i++) {
 		scanf("%s = %s", grammar[i].lhs, grammar[i].rhs);
+		strcpy(grammarTemp[i].lhs, grammar[i].lhs);
+		strcpy(grammarTemp[i].rhs, grammar[i].rhs);
 	}
 	
 	int flag;
@@ -196,6 +326,7 @@ void main() {
 	}
 	
 	firstStruct* f;
+	followStruct* fl;
 	
 	printf("\n");
 	for(int i = 0; i < t1; i++) {
@@ -212,6 +343,14 @@ void main() {
 	
 	printf("\n");
 	for(int i = 0; i < t1; i++) {
-		follow(non_terminals[i]);
+		printf("FOLLOW(%c):", non_terminals[i]);
+		
+		fl = follow(non_terminals[i]);
+		
+		for(int j = 0; j < fl->count; j++) {
+			printf(" %c", fl->arr[j]);
+		}
+		
+		printf("\n");
 	}
 }

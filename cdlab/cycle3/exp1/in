@@ -1,7 +1,10 @@
-6
-E = E+T
-E = T
-T = T*F
-T = F
-F = (E)
-F = i
+9
+S = aBDh
+B = cC
+C = bC
+C = e
+D = EF 
+E = g
+E = e
+F = f
+F = e
