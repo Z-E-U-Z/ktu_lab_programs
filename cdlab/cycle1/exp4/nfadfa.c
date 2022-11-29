@@ -56,14 +56,12 @@ int cmpState(state state1, state state2) {
 }
 
 int containsState(state st, char state[]) {
-	int flag = 0;
-	
 	for(int i = 0; i < st.len; i++) {
 		if(!strcmp(st.states[i], state))
-			flag = 1;
+			return 1;
 	}
 	
-	return flag;
+	return 0;
 }
 
 void insertTrans(trans1* table, state* state1, char input, state* state2, int i) {

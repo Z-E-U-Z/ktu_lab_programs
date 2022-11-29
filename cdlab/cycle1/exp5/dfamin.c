@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
 
 typedef struct trans {
 	char state1[3];
@@ -50,14 +49,12 @@ void removeTrans(int k) {
 }
 
 int isFinal(char state[]) {
-	int flag = 0;
-
 	for(int i = 0; i < f; i++) {
 		if(!strcmp(final[i], state))
-			flag = 1;
+			return 1;
 	}
 	
-	return flag;
+	return 0;
 }
 
 int goTo(char st[], char c) {
@@ -72,16 +69,14 @@ int goTo(char st[], char c) {
 }
 
 int contains(state st[], int n, char state[3]) {
-	int flag = 0;
-	
 	for(int i = 0; i < n; i++) {
 		for(int j = 0; j < st[i].len; j++) {
 			if(!strcmp(st[i].states[j], state))
-				flag = 1;
+				return 1;
 		}
 	}
 	
-	return flag;
+	return 0;
 }
 
 int cmpState(state state1, state state2) {
@@ -104,23 +99,22 @@ int cmpState(state state1, state state2) {
 }
 
 int containsState(state states[], int n, state st) {
-	int flag = 0;
-		
 	for(int i = 0; i < n; i++) {
 		if(cmpState(states[i], st))
-			flag = 1;
+			return 1;
 	}
 	
-	return flag;
+	return 0;
 }
 
-bool is_clique(int n, int graph[n][n], int b) {
+int is_clique(int n, int graph[n][n], int b) {
 	for(int i = 1; i < b; i++) {
 		for(int j = i + 1; j < b; j++)
 			if(graph[store[i]][store[j]] == 1)
-				return false;
+				return 0;
 	}
-	return true;
+	
+	return 1;
 }
 
 void combine(int n)
@@ -378,3 +372,4 @@ void main() {
 		printf("}\n");
 	}
 }
+

@@ -370,7 +370,7 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    2,    2,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    2,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    3,    1,    1,    1,    3,    1,
@@ -441,9 +441,10 @@ char *yytext;
 #line 1 "exp4.l"
 #line 2 "exp4.l"
 #include <stdio.h>
+#include <conio.h>
 int vow = 0, con = 0;
-#line 446 "lex.yy.c"
 #line 447 "lex.yy.c"
+#line 448 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -660,10 +661,10 @@ YY_DECL
 		}
 
 	{
-#line 6 "exp4.l"
+#line 7 "exp4.l"
 
 
-#line 667 "lex.yy.c"
+#line 668 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -723,26 +724,26 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 8 "exp4.l"
+#line 9 "exp4.l"
 ;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 9 "exp4.l"
+#line 10 "exp4.l"
 {vow++;}
 	YY_BREAK
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 10 "exp4.l"
+#line 11 "exp4.l"
 {con++;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 12 "exp4.l"
+#line 13 "exp4.l"
 ECHO;
 	YY_BREAK
-#line 746 "lex.yy.c"
+#line 747 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1747,14 +1748,15 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 12 "exp4.l"
+#line 13 "exp4.l"
 
 
 void main() {
 	printf("Enter string: ");
 	yylex();
-	printf("Number of vowels = %d\n", vow);
-	printf("Number of consonants = %d\n", con);
+	printf("Number of vowels = %d\n",vow);
+	printf("Number of consonants = %d\n",con);
+	getch();
 }
 
 int yywrap()
