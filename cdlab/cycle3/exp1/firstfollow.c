@@ -3,8 +3,8 @@
 #include <string.h>
 
 typedef struct prod {
-	char lhs[10];
-	char rhs[10];
+	char lhs[20];
+	char rhs[20];
 } prod;
 
 typedef struct firstStruct {
@@ -17,9 +17,8 @@ typedef struct followStruct {
 	int count;
 } followStruct;
 
-int n, nTemp;
-prod grammar[30];
-prod grammarTemp[30];
+int n;
+prod grammar[50];
 char temps[] = "PQRUVWXYZ";
 int tempIndex = 0;
 
@@ -39,57 +38,60 @@ firstStruct* first(char c) {
 	
 	for(int i = 0; i < n; i++) {
 		if(grammar[i].lhs[0] == c) {
-			if(grammar[i].rhs[0] >= 'A' && grammar[i].rhs[0] <= 'Z') { // RHS starts with non-terminal
-				for(int j = 0; ; j++) {
-					if(grammar[i].rhs[j] == '\0') {
-						break;
-					}
-					
-					if(grammar[i].rhs[j] < 'A' || grammar[i].rhs[j] >'Z') {
+			if((grammar[i].rhs[0] >= 'A' && grammar[i].rhs[0] <= 'Z') || grammar[i].rhs[0] == 'e') { // RHS starts with non-terminal
+				for(int j = 0; j < strlen(grammar[i].rhs); j++) {
+					if(j != 0 && (grammar[i].rhs[j] < 'A' || grammar[i].rhs[j] >'Z')) {
 						f->arr[f->count++] = grammar[i].rhs[j];
 						break;
 					}
 					
-					firstStruct* f1 = first(grammar[i].rhs[j]);
+					if(grammar[i].rhs[j] != 'e') {
+						firstStruct* f1 = first(grammar[i].rhs[j]);
 					
-					if(contains(f1, 'e')) {
-						for(int k = 0; k < f1->count; k++) {
-							if(f1->arr[k] == 'e')
-								continue;
-							
-							flag = 0;
-							
-							for(int l = 0; l < f->count; l++) {
-								if(f->arr[l] == f1->arr[k]) {
-									flag = 1;
+						if(contains(f1, 'e')) {
+							for(int k = 0; k < f1->count; k++) {
+								if(f1->arr[k] == 'e')
+									continue;
+								
+								flag = 0;
+								
+								for(int l = 0; l < f->count; l++) {
+									if(f->arr[l] == f1->arr[k]) {
+										flag = 1;
+									}
 								}
+								
+								if(!flag)
+									f->arr[f->count++] = f1->arr[k];
 							}
 							
-							if(!flag)
-								f->arr[f->count++] = f1->arr[k];
+							if(grammar[i].rhs[j + 1] == '\0') {
+								f->arr[f->count++] = 'e';
+								break;
+							}
+							
+							continue;
+						} else {
+							for(int k = 0; k < f1->count; k++) {
+								flag = 0;
+								
+								for(int l = 0; l < f->count; l++) {
+									if(f->arr[l] == f1->arr[k]) {
+										flag = 1;
+									}
+								}
+								
+								if(!flag)
+									f->arr[f->count++] = f1->arr[k];
+							}
+							
+							break;
 						}
-						
+					} else {
 						if(grammar[i].rhs[j + 1] == '\0') {
 							f->arr[f->count++] = 'e';
 							break;
 						}
-						
-						continue;
-					} else {
-						for(int k = 0; k < f1->count; k++) {
-							flag = 0;
-							
-							for(int l = 0; l < f->count; l++) {
-								if(f->arr[l] == f1->arr[k]) {
-									flag = 1;
-								}
-							}
-							
-							if(!flag)
-								f->arr[f->count++] = f1->arr[k];
-						}
-						
-						break;
 					}
 				}
 			} else { // RHS starts with terminal
@@ -113,23 +115,20 @@ followStruct* follow(char c) {
 	followStruct* f = (followStruct*) malloc(sizeof(followStruct));
 	int flag;
 	
-	if(grammarTemp[0].lhs[0] == c) {
+	if(grammar[0].lhs[0] == c) {
 		f->arr[f->count++] = '$';
 	}
 	
-	for(int i = 0; i < nTemp; i++) {
-		for(int j = 0; ; j++) {
+	for(int i = 0; i < n; i++) {
+		for(int j = 0; j < strlen(grammar[i].rhs); j++) {
 			flag = 0;
 			
-			if(grammarTemp[i].rhs[j] == '\0')
-				break;
-			
-			if(grammarTemp[i].rhs[j] == c) {
-				if(grammarTemp[i].rhs[j + 1] == '\0') {
-					if(grammarTemp[i].lhs[0] == c)
+			if(grammar[i].rhs[j] == c) {
+				if(grammar[i].rhs[j + 1] == '\0') {
+					if(grammar[i].lhs[0] == c)
 						break;
 					
-					followStruct* f2 = follow(grammarTemp[i].lhs[0]);
+					followStruct* f2 = follow(grammar[i].lhs[0]);
 					
 					for(int k = 0; k < f2->count; k++) {
 						flag = 0;
@@ -144,12 +143,12 @@ followStruct* follow(char c) {
 							f->arr[f->count++] = f2->arr[k];
 						}
 					}
-				} else if(grammarTemp[i].rhs[j + 1] >= 'A' && grammarTemp[i].rhs[j + 1] <= 'Z') {
-					firstStruct* f1 = first(grammarTemp[i].rhs[j + 1]);
+				} else if(grammar[i].rhs[j + 1] >= 'A' && grammar[i].rhs[j + 1] <= 'Z') {
+					firstStruct* f1 = first(grammar[i].rhs[j + 1]);
 					
 					int m = 2;
 					
-					while(grammarTemp[i].rhs[j + m] != '\0' && contains(f1, 'e')) {
+					while(grammar[i].rhs[j + m] != '\0' && contains(f1, 'e')) {
 						for(int k = 0; k < f1->count; k++) {
 							if(f1->arr[k] == 'e')
 								continue;
@@ -169,11 +168,11 @@ followStruct* follow(char c) {
 						
 						flag = 0;
 						
-						if(grammarTemp[i].rhs[j + m] >= 'A' && grammarTemp[i].rhs[j + m] <= 'Z') {
-							f1 = first(grammarTemp[i].rhs[j + m]);
+						if(grammar[i].rhs[j + m] >= 'A' && grammar[i].rhs[j + m] <= 'Z') {
+							f1 = first(grammar[i].rhs[j + m]);
 							m++;
 						} else {
-							f->arr[f->count++] = grammarTemp[i].rhs[j + m];
+							f->arr[f->count++] = grammar[i].rhs[j + m];
 							flag = 1;
 							break;
 						}
@@ -197,11 +196,11 @@ followStruct* follow(char c) {
 							}
 						}
 						
-						if(grammarTemp[i].rhs[j + m] == '\0') {
-							if(grammarTemp[i].lhs[0] == c)
+						if(grammar[i].rhs[j + m] == '\0') {
+							if(grammar[i].lhs[0] == c)
 								break;
 							
-							followStruct* f2 = follow(grammarTemp[i].lhs[0]);
+							followStruct* f2 = follow(grammar[i].lhs[0]);
 							
 							for(int k = 0; k < f2->count; k++) {
 								flag = 0;
@@ -219,7 +218,7 @@ followStruct* follow(char c) {
 						}
 					}
 				} else {
-					f->arr[f->count++] = grammarTemp[i].rhs[j + 1];
+					f->arr[f->count++] = grammar[i].rhs[j + 1];
 				}
 			}
 		}
@@ -229,107 +228,167 @@ followStruct* follow(char c) {
 }
 
 void main() {
-	int t1 = 0, t2 = 0;
+	int t = 0;
 	char non_terminals[10];
-	char terminals[10];
 	
 	printf("Enter the number of productions: ");
 	scanf("%d", &n);
-	nTemp = n;
 	
+	printf("\nEnter the productions (Eg: S = aBc):\n");
 	for(int i = 0; i < n; i++) {
 		scanf("%s = %s", grammar[i].lhs, grammar[i].rhs);
-		strcpy(grammarTemp[i].lhs, grammar[i].lhs);
-		strcpy(grammarTemp[i].rhs, grammar[i].rhs);
 	}
 	
 	int flag;
 	
+	// Adding the non-terminals
 	for(int i = 0; i < n; i++) {
 		flag = 0;
 		
-		for(int j = 0; j < t1; j++) {
+		for(int j = 0; j < t; j++) {
 			if(non_terminals[j] == grammar[i].lhs[0])
 				flag = 1;
 		}
 		
 		if(!flag) {
-			non_terminals[t1++] = grammar[i].lhs[0];
+			non_terminals[t++] = grammar[i].lhs[0];
 		}
 		
-		for(int j = 0; ; j++) {
-			if(grammar[i].rhs[j] == '\0')
-				break;
-			else if(grammar[i].rhs[j] >= 'A' && grammar[i].rhs[j] <= 'Z') {
+		for(int j = 0; j < strlen(grammar[i].rhs); j++) {
+			if(grammar[i].rhs[j] >= 'A' && grammar[i].rhs[j] <= 'Z') {
 				flag = 0;
 				
-				for(int k = 0; k < t1; k++) {
+				for(int k = 0; k < t; k++) {
 					if(non_terminals[k] == grammar[i].rhs[j])
 						flag = 1;
 				}
 				
 				if(!flag) {
-					non_terminals[t1++] = grammar[i].rhs[j];
+					non_terminals[t++] = grammar[i].rhs[j];
 				}
 				
 				continue;
 			}
+		}
+	}
+	
+	for(int i = 0; i < t; i++) {
+		flag = 0;
+		
+		int temp = n;
+		
+		// Eliminating indirect left recursion
+		while(!flag) {
+			flag = 1;
 			
-			flag = 0;
-			
-			for(int k = 0; k < t2; k++) {
-				if(terminals[k] == grammar[i].rhs[j])
-					flag = 1;
+			for(int j = 0; j < temp; j++) {
+				if(grammar[j].lhs[0] == non_terminals[i]) {
+					if(grammar[j].rhs[0] >= 'A' && grammar[j].rhs[0] <= 'Z' && grammar[j].rhs[0] > non_terminals[i]) {
+						flag = 0;
+						
+						for(int k = 0; k < temp; k++) {
+							if(grammar[k].lhs[0] == grammar[j].rhs[0]) {
+								grammar[n].lhs[0] = non_terminals[i];
+								grammar[n].lhs[1] = '\0';
+								strcpy(grammar[n].rhs, grammar[k].rhs);
+								strcat(grammar[n].rhs, &grammar[j].rhs[1]);
+								n++;
+							}
+						}
+						
+						for(int k = j; k + 1 < n; k++) {
+							strcpy(grammar[k].lhs, grammar[k + 1].lhs);
+							strcpy(grammar[k].rhs, grammar[k + 1].rhs);
+						}
+						
+						temp--;
+						n--;
+						j--;
+					}
+				}
 			}
-			
-			if(!flag) {
-				terminals[t2++] = grammar[i].rhs[j];
+		}
+		
+		// Eliminating direct left recursion
+		for(int l = 0; l < n; l++) {
+			if(grammar[l].lhs[0] == non_terminals[i] && grammar[l].lhs[0] == grammar[l].rhs[0]) {
+				for(int j = 0; ; j++) {
+					if(grammar[l].rhs[j + 1] == '\0') {
+						grammar[l].rhs[j] = temps[tempIndex];
+						break;
+					}
+					
+					grammar[l].rhs[j] = grammar[l].rhs[j + 1];
+				}
+				
+				for(int j = 0; j < n; j++) {
+					if(j == l)
+						continue;
+					
+					if(grammar[j].lhs[0] == grammar[l].lhs[0]) {
+						for(int k = 0; ; k++) {
+							if(grammar[j].rhs[k] == '\0') {
+								grammar[j].rhs[k] = temps[tempIndex];
+								grammar[j].rhs[k + 1] = '\0';
+								break;
+							}
+						}
+					}
+				}
+				
+				grammar[l].lhs[0] = temps[tempIndex];
+				grammar[n].lhs[0] = temps[tempIndex];
+				grammar[n].lhs[1] = '\0';
+				grammar[n].rhs[0] = 'e';
+				grammar[n].rhs[1] = '\0';
+				n++;
+				tempIndex++;
 			}
 		}
 	}
 	
-	// Eliminating left recursion
+	printf("\nAfter eliminating direct and indirect left recursions\n");
 	for(int i = 0; i < n; i++) {
-		if(grammar[i].lhs[0] == grammar[i].rhs[0]) {
-			for(int j = 0; ; j++) {
-				if(grammar[i].rhs[j + 1] == '\0') {
-					grammar[i].rhs[j] = temps[tempIndex];
-					break;
+		printf("%s = %s\n", grammar[i].lhs, grammar[i].rhs);
+	}
+	
+	// Adding the new non-terminals
+	for(int i = 0; i < n; i++) {
+		flag = 0;
+		
+		for(int j = 0; j < t; j++) {
+			if(non_terminals[j] == grammar[i].lhs[0])
+				flag = 1;
+		}
+		
+		if(!flag) {
+			non_terminals[t++] = grammar[i].lhs[0];
+		}
+		
+		for(int j = 0; j < strlen(grammar[i].rhs); j++) {
+			if(grammar[i].rhs[j] >= 'A' && grammar[i].rhs[j] <= 'Z') {
+				flag = 0;
+				
+				for(int k = 0; k < t; k++) {
+					if(non_terminals[k] == grammar[i].rhs[j])
+						flag = 1;
 				}
 				
-				grammar[i].rhs[j] = grammar[i].rhs[j + 1];
-			}
-					
-			for(int j = 0; j < n; j++) {
-				if(j == i)
-					continue;
-				
-				if(grammar[j].lhs[0] == grammar[i].lhs[0]) {
-					for(int k = 0; ; k++) {
-						if(grammar[j].rhs[k] == '\0') {
-							grammar[j].rhs[k] = temps[tempIndex];
-							grammar[j].rhs[k + 1] = '\0';
-							break;
-						}
-					}
+				if(!flag) {
+					non_terminals[t++] = grammar[i].rhs[j];
 				}
+				
+				continue;
 			}
-
-			grammar[i].lhs[0] = temps[tempIndex];
-			grammar[n].lhs[0] = temps[tempIndex];
-			grammar[n].lhs[1] = '\0';
-			grammar[n].rhs[0] = 'e';
-			grammar[n].rhs[1] = '\0';
-			n++;
-			tempIndex++;
 		}
 	}
 	
 	firstStruct* f;
 	followStruct* fl;
 	
+	// FIRST
 	printf("\n");
-	for(int i = 0; i < t1; i++) {
+	for(int i = 0; i < t; i++) {
 		printf("FIRST(%c):", non_terminals[i]);
 		
 		f = first(non_terminals[i]);
@@ -341,8 +400,9 @@ void main() {
 		printf("\n");
 	}
 	
+	// FOLLOW
 	printf("\n");
-	for(int i = 0; i < t1; i++) {
+	for(int i = 0; i < t; i++) {
 		printf("FOLLOW(%c):", non_terminals[i]);
 		
 		fl = follow(non_terminals[i]);
@@ -354,3 +414,4 @@ void main() {
 		printf("\n");
 	}
 }
+
