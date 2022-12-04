@@ -1,30 +1,27 @@
 #include <stdio.h>
 #include <string.h>
 
+#define MAX 20
+
 typedef struct stack {
 	int top;
-	char arr[20];
+	char arr[MAX];
 } stack;
 
 typedef struct prod {
-	char lhs[10];
-	char rhs[10];
+	char lhs[MAX];
+	char rhs[MAX];
 } prod;
 
-typedef struct terminal {
-	char c;
-	int priority;
-} terminal;
-
-terminal terminals[10];
-int t = 0,
+char terminals[10];
+int t = 0;
 
 void initStack(stack* st) {
 	st->top = -1;
 }
 
 void push(stack* st, char c) {
-	st->arr[st->top++] = c;
+	st->arr[++st->top] = c;
 }
 
 char pop(stack* st) {
@@ -36,30 +33,16 @@ char seek(stack* st) {
 	return st->arr[st->top];
 }
 
-int priority(c) {
-	for(int i = 0; i < t; i++) {
-		if(terminals[i].c == c)
-			return terminals[i].priority;
-	}
-	
-	return -1;
-}
-
-int checkAccept() {
+int checkAccept(stack* st, char c, char start) {
+	if(st->arr[st->top] == start && st->arr[st->top - 1] == '$' && c == '$')
+		return 1;
 	return 0;
 }
 
 void main() {
 	int n;
 	prod grammar[30];
-	stack st;
-	char input[20];
-	int ip = 0;
 	
-	initStack(&st);
-	
-	push(&st, '$');
-
 	printf("Enter the number of productions: ");
 	scanf("%d", &n);
 	
@@ -76,49 +59,99 @@ void main() {
 				flag = 0;
 				
 				for(int k = 0; k < t; k++) {
-					if(terminals[k].c == grammar[i].rhs[j])
+					if(terminals[k] == grammar[i].rhs[j])
 						flag = 1;
 				}
 				
 				if(!flag) {
-					terminals[t++].c = grammar[i].rhs[j];
+					terminals[t++] = grammar[i].rhs[j];
 				}
 			}
 		}
 	}
 	
-	printf("\nEnter priority (0 - lowest, 10 - highest):\n");
-	for(int i = 0; i < t; i++) {
-		printf("%c: ", terminals[i].c);
-		scanf("%d", &terminals[i].priority);
-	}
-	
-	printf("\nEnter the input string: ");
-	scanf("%s", input);
-	
-	input[strlen(input) + 1] = '\0';
-	input[strlen(input)] = '$';
-	
-	char c;
-	
 	while(1) {
-		if(priority(seek(&st)) > priority(input[ip])) {
-			// SHIFT
-			
-			push(&st, input[ip++]);
-		} else {
-			// REDUCE
-			
-			c = seek(&st);
-			
-			for(int i = 0; i < n; i++) {
-				
-			}
-		}
+		stack st;
+		char input[20];
+		int ip = 0;
+		printf("\nEnter the input string: ");
+		scanf("%s", input);
+
+		initStack(&st);
+
+		push(&st, '$');
+
+		input[strlen(input) + 1] = '\0';
+		input[strlen(input)] = '$';
 		
-		if(checkAccept()) {
-			printf("\Accepted.\n");
-			break;
+		char c;
+		char str[MAX];
+		int ip1 = -1, flag1 = 0;
+		flag = 0;
+
+		while(1) {
+			while(1) {
+				c = pop(&st);
+				
+				if(c == '$') {
+					push(&st, c);
+					
+					for(int i = 0; i <= ip1; i++) {
+						push(&st, str[i]);
+					}
+					
+					ip1 = -1;
+					c = input[ip++];
+					
+					if(c == '$') {
+						// REJECT
+						
+						printf("\nRejected!\n");
+						flag1 = 1;
+					} else {
+						// SHIFT
+						
+						push(&st, c);
+					}
+					
+					break;
+				} else {
+					ip1++;
+					str[ip1 + 1] = '\0';
+					
+					for(int i = ip1; i > 0; i--) {
+						str[i] = str[i - 1];			
+					}
+					
+					str[0] = c;
+					
+					flag = 0;
+					
+					for(int i = 0; i < n; i++) {
+						if(!strcmp(grammar[i].rhs, str)) {
+							// REDUCE
+							
+							push(&st, grammar[i].lhs[0]);
+							ip1 = -1;
+							flag = 1;
+							break;
+						}
+					}
+					
+					if(flag) {
+						break;
+					}
+				}
+			}
+			
+			if(flag1) break;
+
+			if(checkAccept(&st, input[ip], grammar[0].lhs[0])) {
+				// ACCEPT
+				
+				printf("\nAccepted.\n");
+				break;
+			}
 		}
 	}
 }
