@@ -70,6 +70,8 @@ void main() {
 		}
 	}
 	
+	printf("\nNB: Due to Shift-Reduce and Reduce-Reduce conflicts, the outputs may be wrong.\n");
+	
 	while(1) {
 		stack st;
 		char input[20];
